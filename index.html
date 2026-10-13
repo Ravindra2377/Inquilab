@@ -73,6 +73,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 44px;font
 .sir-subbox li{margin-bottom:6px}
 .sir-escalate{margin-top:14px;padding:12px 14px;border-left:4px solid var(--saf);background:var(--bg);font-size:.95rem}
 .sir-escalate b{color:var(--ink);display:block;margin-bottom:4px}
+.sir-doc-note{font-size:.85rem;color:var(--mute);margin:0 0 10px;font-style:italic}
 .case-meta{margin:4px 0 6px}.case-meta .art{font-size:.85rem;padding:2px 8px}
 .jlink{display:inline-block;margin-top:4px;font-size:.9rem;color:var(--link);font-weight:600}
 @media print{.wrap>*:not(#detain){display:none!important}body{background:#fff;color:#000}.btn,.noprint{display:none!important}#detain::after{content:"Educational information, not legal advice. Verify with a lawyer or a legal aid authority.";display:block;font-size:12px;margin-top:14px}}
@@ -120,11 +121,11 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 44px;font
         to check your electoral-roll entry and current application procedures.
       </p>
       <ul>
-        <li><b>Got an SIR notice:</b> Note the deadline and officer details, take photos, submit a written reply with address/age proof, and get a stamped acknowledgement.</li>
-        <li><b>Name missing:</b> Search on voters.eci.gov.in. If unregistered or turning 18, apply online or offline via Form 6.</li>
-        <li><b>Name dropped from earlier roll:</b> Under RPA 1950 Section 22 and Rule 21A, deletion requires notice and hearing. Re-apply via Form 6 with previous roll proof and submit a representation to the ERO.</li>
-        <li><b>Called for a hearing:</b> Attend with 2 sets of original documents and self-attested copies; demand signed attendance verification.</li>
-        <li><b>Application rejected:</b> Demand the written speaking order. File First Appeal to District Magistrate within 15 days under Section 24, RP Act 1950.</li>
+        <li><b>Got an SIR notice:</b> Note the deadline and officer details, take photos, submit a written reply with address/age proof, and demand a signed/stamped acknowledgement.</li>
+        <li><b>Unenrolled or first-time voter missing:</b> Search on voters.eci.gov.in. If unregistered or turning 18, apply online or offline via Form 6.</li>
+        <li><b>Existing voter omitted during revision:</b> Distinguish pre-final publication (Rule 21A opportunity to show cause; Rule 23 appeal) from post-publication remedies (Section 22/23 RP Act; Section 24 / Rule 27 appeal). Do not create duplicate records.</li>
+        <li><b>Called for a hearing:</b> Attend with duplicate dossiers and original proofs; request attendance endorsement.</li>
+        <li><b>Application or claim rejected:</b> Request the formal written order with reasons. First appeal lies to District Magistrate within 15 days under Rule 27 (post-publication) or Rule 23 (pre-publication revision).</li>
         <li><b>Correct details or shifting:</b> Submit Form 8 on the voter portal.</li>
       </ul>
 
@@ -357,8 +358,14 @@ var CASES=[
 var VC=[
 ["<b>Go online</b> Visit <a href='https://voters.eci.gov.in/' target='_blank' rel='noopener'>voters.eci.gov.in</a> or the Voter Helpline App (Android & iOS).","<b>ऑनलाइन जाएँ</b> <a href='https://voters.eci.gov.in/' target='_blank' rel='noopener'>voters.eci.gov.in</a> या Voter Helpline App (Android/iOS) खोलें।"],
 ["<b>Search by details</b> Enter your name, father's/husband's name, age, gender and state. Or search by EPIC number (your voter-ID number).","<b>विवरण से खोजें</b> नाम, पिता/पति का नाम, उम्र, लिंग और राज्य डालें। या EPIC नंबर (मतदाता पहचान पत्र संख्या) से खोजें।"],
-["<b>Check your details</b> If your entry appears, confirm that the name, photo, address and polling booth are correct. Report errors using Form 8.","<b>विवरण जाँचें</b> अगर नाम दिखे तो नाम, फ़ोटो, पता और मतदान केंद्र सही हैं या नहीं जाँचें। गलती हो तो फ़ॉर्म 8 से सुधार कराएँ।"],
-["<b>Not found?</b> Don't panic. Your name may be missing for several reasons, including a revision exercise in your state. Check your state's claims-and-objections deadline, then apply with Form 6 (see below).","<b>नहीं मिला?</b> घबराएँ नहीं। नाम कई कारणों से छूट सकता है, जिनमें आपके राज्य में चल रहा पुनरीक्षण भी शामिल है। अपने राज्य में दावे-आपत्ति की अंतिम तिथि देखें, फिर फ़ॉर्म 6 से आवेदन करें (नीचे देखें)।"]
+[
+  "<b>Not found?</b> Don't panic. If you are an unregistered or first-time voter, apply using Form 6 (see below). " +
+  "If you were an existing voter missing during revision or an ongoing SIR, do not file a duplicate Form 6; " +
+  "check your state's claims-and-objections schedule and follow the SIR Action Centre below.",
+  "<b>नहीं मिला?</b> घबराएँ नहीं। यदि आप अप्रकाशित या नए मतदाता हैं, तो फ़ॉर्म 6 से आवेदन करें (नीचे देखें)। " +
+  "यदि आप पहले से पंजीकृत मतदाता थे और पुनरीक्षण या SIR में नाम नहीं दिख रहा, तो दोहरा फ़ॉर्म 6 न भरें; " +
+  "अपने राज्य की दावे-आपत्ति समय-सारणी देखें और नीचे दिए गए SIR एक्शन सेंटर का पालन करें।"
+]
 ];
 
 /* Form 6 steps: [en, hi] */
@@ -403,13 +410,14 @@ var VT=[
 [
   "What SIR means",
   "SIR का मतलब",
-  "SIR stands for Special Intensive Revision, a more intensive exercise than the routine yearly revision of the rolls. " +
-  "Its schedule and phases differ by state, so check your state's notices on the official ECI site. " +
-  "If your name is missing or wrong, apply with Form 6 or correct it with Form 8, keep your reference number, " +
-  "and note your state's deadline for claims and objections.",
-  "SIR का पूरा नाम Special Intensive Revision (विशेष गहन पुनरीक्षण) है, जो मतदाता सूची के नियमित वार्षिक पुनरीक्षण से अधिक गहन प्रक्रिया है। " +
-  "इसका कार्यक्रम राज्य के अनुसार अलग होता है, इसलिए ECI की आधिकारिक साइट पर अपने राज्य की सूचनाएँ देखें। " +
-  "नाम न हो या गलत हो तो फ़ॉर्म 6 से आवेदन करें या फ़ॉर्म 8 से सुधार कराएँ, संदर्भ संख्या रखें और अपने राज्य में दावे-आपत्ति की अंतिम तिथि नोट करें।"
+  "SIR stands for Special Intensive Revision, a comprehensive update of electoral rolls. " +
+  "Its schedule and phases differ by state; check notices on the official ECI site. " +
+  "New voters register via Form 6; for corrections or shifting, use Form 8. " +
+  "Existing electors omitted during revision should follow the claims, objections, or notice response procedure on the ECI portal rather than filing an unverified fresh registration.",
+  "SIR का पूरा नाम Special Intensive Revision (विशेष गहन पुनरीक्षण) है, जो निर्वाचक नामावली का व्यापक अद्यतन है। " +
+  "इसका कार्यक्रम राज्य के अनुसार भिन्न होता है; ECI की आधिकारिक साइट पर सूचनाएँ देखें। " +
+  "नए मतदाता फ़ॉर्म 6 से पंजीकरण करें; सुधार या स्थानांतरण के लिए फ़ॉर्म 8 का उपयोग करें। " +
+  "पुनरीक्षण में छूटे मौजूदा मतदाता बिना जाँच नया पंजीकरण करने के बजाय ECI पोर्टल पर दावे, आपत्ति या नोटिस प्रक्रिया का पालन करें।"
 ]
 ];
 
@@ -458,24 +466,24 @@ var SIR_SCENARIOS = [
   },
   {
     id: "missing",
-    en_title: "2. My name is missing",
-    hi_title: "2. मेरा नाम सूची में नहीं है",
-    dest_en: "Official Destination: Form 6 on ECI Portal",
-    dest_hi: "आधिकारिक गंतव्य: चुनाव आयोग पोर्टल — फ़ॉर्म 6",
+    en_title: "2. Unenrolled or first-time voter missing from roll",
+    hi_title: "2. अप्रकाशित या नया मतदाता (पहली बार)",
+    dest_en: "Official Destination: Form 6 on ECI Voter Portal",
+    dest_hi: "आधिकारिक गंतव्य: चुनाव आयोग पोर्टल — फ़ॉर्म 6 (नया पंजीकरण)",
     url: "https://voters.eci.gov.in/",
     steps_en: [
-      "Search first: Check by EPIC number and by details on voters.eci.gov.in and your state CEO website.",
-      "Check age qualification: If you are 18+ or turning 18 before 1 Jan, 1 Apr, 1 Jul, or 1 Oct, apply.",
-      "Fill Form 6: Submit Form 6 online via voters.eci.gov.in or offline through your local BLO/ERO.",
-      "Save Reference Number: Keep the acknowledgement tracking ID to monitor verification status.",
-      "Facilitate BLO verification: Keep original age and residence documents ready for physical check."
+      "Distinguish category: Form 6 is exclusively for new electors who have never been enrolled or who turn 18. If you were already an enrolled voter and omitted during an ongoing revision or SIR, do not file a fresh Form 6; check Scenario 3 to lodge a claim or dispute exclusion.",
+      "Search electoral database: Check by EPIC number and by exact demographic details on voters.eci.gov.in and your state CEO portal.",
+      "Check qualifying dates: Citizens turning 18 on or before 1 Jan, 1 Apr, 1 Jul, or 1 Oct can apply in advance from age 17.",
+      "Submit Form 6 if eligible: Submit Form 6 online via voters.eci.gov.in or offline through your local BLO/ERO.",
+      "Save Reference Number & track: Retain the acknowledgement tracking ID to monitor BLO address verification."
     ],
     steps_hi: [
-      "पहले खोजें: voters.eci.gov.in और अपने राज्य के CEO पोर्टल पर EPIC नंबर और नाम से जाँचें।",
-      "अर्हता तिथि: यदि आपकी आयु 18+ है या 1 जनवरी, 1 अप्रैल, 1 जुलाई या 1 अक्टूबर को 18 के हो रहे हैं, तो आवेदन करें।",
-      "फ़ॉर्म 6 भरें: नए मतदाता पंजीकरण के लिए ऑनलाइन voters.eci.gov.in पर या बीएलओ के माध्यम से ऑफ़लाइन फ़ॉर्म 6 जमा करें।",
-      "रेफ़रेंस नंबर सुरक्षित रखें: पावती और ट्रैकिंग नंबर सहेजें जिससे आवेदन की स्थिति जाँची जा सके।",
-      "BLO भौतिक सत्यापन: बीएलओ के निरीक्षण के लिए अपने मूल आयु और निवास दस्तावेज़ तैयार रखें।"
+      "श्रेणी स्पष्ट करें: फ़ॉर्म 6 केवल उन नए मतदाताओं के लिए है जो पहले कभी पंजीकृत नहीं हुए या 18 वर्ष के हो रहे हैं। यदि आप पहले से पंजीकृत थे और SIR पुनरीक्षण में नाम छूटा है, तो नया फ़ॉर्म 6 न भरें; दावा दर्ज करने के लिए परिदृश्य 3 देखें।",
+      "मतदाता सूची में खोजें: voters.eci.gov.in और राज्य के CEO पोर्टल पर EPIC नंबर और विवरण से जाँचें।",
+      "अर्हता तिथियाँ: 1 जनवरी, 1 अप्रैल, 1 जुलाई या 1 अक्टूबर को 18 के हो रहे नागरिक 17 वर्ष की आयु से अग्रिम आवेदन कर सकते हैं।",
+      "पात्र होने पर फ़ॉर्म 6 भरें: नए पंजीकरण के लिए ऑनलाइन voters.eci.gov.in पर या स्थानीय BLO/ERO के माध्यम से फ़ॉर्म 6 जमा करें।",
+      "रेफ़रेंस नंबर सुरक्षित रखें: BLO सत्यापन की स्थिति ट्रैक करने के लिए पावती क्रमांक सहेजें।"
     ],
     docs_en: [
       "1 Passport-size colour photograph.",
@@ -492,39 +500,39 @@ var SIR_SCENARIOS = [
   },
   {
     id: "dropped",
-    en_title: "3. Dropped from earlier roll",
-    hi_title: "3. पुरानी सूची से नाम हटा दिया",
-    dest_en: "Official Destination: ERO Office & CEO Deletion Lists",
-    dest_hi: "आधिकारिक गंतव्य: ERO कार्यालय व राज्य CEO विलोपन सूची",
+    en_title: "3. Existing voter omitted from draft or final roll",
+    hi_title: "3. मौजूदा मतदाता का नाम ड्राफ़्ट या अंतिम सूची से छूटा",
+    dest_en: "Official Destination: ERO Office & State CEO Claims / Deletion Lists",
+    dest_hi: "आधिकारिक गंतव्य: ERO कार्यालय व राज्य CEO दावे/विलोपन सूची",
     url: "https://voters.eci.gov.in/",
     steps_en: [
-      "Gather past evidence: Locate an old voter slip, previous electoral roll PDF page, or previous EPIC copy.",
-      "Inspect Deletion List: Check the published draft and final deletion list (Form 7 exclusions) on your State CEO portal.",
-      "Invoke statutory protection: Under Section 22 of the RP Act 1950 and Rule 21A, deletion requires reasonable opportunity of hearing.",
-      "Submit Form 6 with representation: File Form 6 for re-inclusion, attaching a letter detailing wrongful omission without notice.",
-      "Keep proof of delivery: Retain all stamped delivery receipts and tracking references."
+      "Identify revision stage: Check whether your state's revision is currently at the draft roll (claims and objections) stage or post-final publication.",
+      "Inspect Deletion Lists: Review published draft deletion lists (Form 7 exclusions) and previous roll entries on your State CEO portal.",
+      "Pre-publication statutory safeguard (Rule 21A): Before final publication, Rule 21A requires the ERO to make every endeavour to give a reasonable opportunity to show cause before deleting a name on grounds of death or ceasing to be an ordinary resident.",
+      "Lodge timely claim: During the claims period, submit a formal claim for inclusion with your previous EPIC/roll record and current residence proof under applicable state guidelines.",
+      "Post-publication remedies (Section 22 / 23 RP Act): After final publication, apply for continuous inclusion under Section 23 read with Rule 26, or submit a representation against wrongful deletion under Section 22 with the ERO."
     ],
     steps_hi: [
-      "पुराना रिकॉर्ड जुटाएँ: पुरानी मतदाता पर्ची, पिछली निर्वाचक नामावली का पेज या पुराने वोटर कार्ड की प्रति निकालें।",
-      "विलोपन सूची (Deletion List) देखें: राज्य के CEO पोर्टल पर ड्राफ़्ट और फाइनल विलोपन सूची (फ़ॉर्म 7) की जाँच करें।",
-      "कानूनी सुरक्षा का हवाला दें: RP Act 1950 की धारा 22 और नियम 21A के तहत बिना सुनवाई नाम हटाना गैरकानूनी है।",
-      "अभ्यावेदन के साथ फ़ॉर्म 6 जमा करें: बिना नोटिस गलत विलोपन का उल्लेख करते हुए पुनः फ़ॉर्म 6 और कवर लेटर जमा करें।",
-      "पावती सुरक्षित रखें: मुहर लगी पावती या डाक की रसीद संभाल कर रखें।"
+      "पुनरीक्षण का चरण पहचानें: जाँचें कि आपके राज्य में पुनरीक्षण अभी ड्राफ़्ट नामावली (दावे और आपत्तियाँ) के चरण में है या अंतिम प्रकाशन हो चुका है।",
+      "विलोपन सूची (Deletion List) देखें: राज्य के CEO पोर्टल पर प्रकाशित ड्राफ़्ट विलोपन सूची (फ़ॉर्म 7) और पिछली नामावली प्रविष्टियों की जाँच करें।",
+      "अंतिम प्रकाशन पूर्व कानूनी सुरक्षा (नियम 21A): अंतिम प्रकाशन से पूर्व, नियम 21A के तहत मृत्यु या सामान्य निवासी न रहने के आधार पर नाम हटाने से पहले ERO द्वारा कारण बताओ अवसर देने का हर संभव प्रयास करना आवश्यक है।",
+      "समय पर दावा दर्ज करें: दावे-आपत्ति की अवधि में, अपने पुराने EPIC/नामावली साक्ष्य और वर्तमान निवास प्रमाण के साथ राज्य के निर्देशों के अनुसार औपचारिक दावा प्रस्तुत करें।",
+      "अंतिम प्रकाशन के बाद का उपाय (धारा 22 / 23 RP Act): अंतिम प्रकाशन के बाद, धारा 23 व नियम 26 के तहत नाम शामिल कराने का आवेदन दें, या गलत विलोपन के विरुद्ध धारा 22 के तहत ERO के समक्ष अभ्यावेदन प्रस्तुत करें।"
     ],
     docs_en: [
       "Copy of previous EPIC card.",
       "Screenshot or printout of earlier roll entry (AC number, Part number, and Serial number).",
       "Current ordinary residence proof and identity proof.",
-      "Formal representation letter addressed to the ERO/DEO."
+      "Formal claim or representation letter addressed to the ERO/DEO."
     ],
     docs_hi: [
       "पुराने वोटर आईडी कार्ड की प्रति।",
       "पिछली नामावली का स्क्रीनशॉट या प्रिंट (विधानसभा, भाग संख्या और क्रम संख्या सहित)।",
       "वर्तमान निवास प्रमाण और पहचान प्रमाण।",
-      "ERO/DEO के नाम औपचारिक अभ्यावेदन पत्र।"
+      "ERO/DEO के नाम औपचारिक दावा या अभ्यावेदन पत्र।"
     ],
-    esc_en: "Submit representation to District Election Officer (DM). If rejected, appeal under Section 24 of RP Act, 1950. For arbitrary mass deletions, a writ petition lies under Article 226 in the High Court.",
-    esc_hi: "ज़िला निर्वाचन अधिकारी (डीएम) को अभ्यावेदन दें। अस्वीकृत होने पर धारा 24 के तहत अपील करें। मनमाने विलोपन पर हाईकोर्ट में अनुच्छेद 226 याचिका दायर की जा सकती है।"
+    esc_en: "Pre-publication decisions under Rules 20/21/21A are appealable under Rule 23 to the Appellate Officer. Post-publication orders under Section 22/23 are appealable to the District Magistrate under Rule 27 / Section 24. For arbitrary mass disenfranchisement, a writ petition lies under Article 226 in the High Court.",
+    esc_hi: "नियम 20/21/21A के तहत अंतिम प्रकाशन पूर्व के निर्णयों के विरुद्ध नियम 23 के तहत अपीलीय अधिकारी को अपील होती है। अंतिम प्रकाशन बाद धारा 22/23 के निर्णयों के विरुद्ध नियम 27 व धारा 24 के तहत ज़िला मजिस्ट्रेट को अपील होती है। मनमाने सामूहिक विलोपन पर उच्च न्यायालय में अनुच्छेद 226 याचिका दायर की जा सकती है।"
   },
   {
     id: "hearing",
@@ -559,29 +567,29 @@ var SIR_SCENARIOS = [
       "मूल निवास प्रमाण (मकान रजिस्ट्री, रजिस्टर्ड किरायानामा, बिल, पासबुक)।",
       "उसी पते पर रहने वाले परिवार के अन्य सदस्यों के मतदाता विवरण।"
     ],
-    esc_en: "If an adverse decision is indicated, demand a certified copy of the reasoned speaking order immediately. Appeal to the District Magistrate within 15 days under Rule 27 of Registration of Electors Rules, 1960.",
-    esc_hi: "यदि प्रतिकूल निर्णय हो, तो तत्काल सकारण आदेश (speaking order) की प्रमाणित प्रति माँगें। 15 दिनों में डीएम को नियम 27 के तहत अपील करें।"
+    esc_en: "Request written decision: If an adverse decision is indicated, request a certified copy of the written speaking order stating reasons. Determine whether your appeal lies under Rule 23 (pre-publication revision) or Rule 27 (post-publication order) and confirm the applicable limitation period.",
+    esc_hi: "लिखित निर्णय माँगें: यदि प्रतिकूल निर्णय हो, तो कारणों सहित सकारण लिखित आदेश (speaking order) की प्रमाणित प्रति प्राप्त करें। जाँचें कि आपकी अपील नियम 23 (प्रकाशन पूर्व पुनरीक्षण) या नियम 27 (प्रकाशन बाद आदेश) के अधीन है और निर्धारित समय सीमा की पुष्टि करें।"
   },
   {
     id: "rejected",
-    en_title: "5. Application was rejected",
-    hi_title: "5. आवेदन अस्वीकार कर दिया गया",
-    dest_en: "Official Destination: Appellate Authority: District Magistrate (DEO)",
-    dest_hi: "आधिकारिक गंतव्य: अपीलीय प्राधिकारी: ज़िला मजिस्ट्रेट (DEO)",
+    en_title: "5. Application or claim was rejected",
+    hi_title: "5. आवेदन या दावा अस्वीकार किया गया",
+    dest_en: "Official Destination: Designated Appellate Authority (DM / CEO)",
+    dest_hi: "आधिकारिक गंतव्य: निर्धारित अपीलीय प्राधिकारी (DM / CEO)",
     url: "https://voters.eci.gov.in/",
     steps_en: [
-      "Obtain written order: An oral refusal has no legal effect. Insist on the formal written speaking order with reasons.",
-      "Note 15-day deadline: First Appeal must be submitted to the District Magistrate / DEO within 15 calendar days.",
-      "Draft Appeal Memorandum: Clearly explain how submitted proofs satisfy statutory requirements.",
-      "Check nominal fees: Affix required state court fee stamps if specified by state rules.",
-      "Keep CEO Second Appeal ready: If DM rejects, a Second Appeal lies before the State Chief Electoral Officer (CEO)."
+      "Request formal written order: Request the formal written decision containing reasons from the ERO, as appeal procedures require the specific order being challenged.",
+      "Identify applicable appeal route: For orders under Section 22 or 23, file a First Appeal to the District Magistrate / DEO within 15 days under Rule 27 of Registration of Electors Rules, 1960. Decisions under Rule 20/21/21A before final publication follow Rule 23.",
+      "Draft Grounds of Appeal: Detail why the rejection was erroneous, referencing submitted residence/identity proofs and relevant statutory rules.",
+      "Check prescribed fees: Check state election rules for any nominal court fee stamp requirement.",
+      "Second Appeal route: If the District Magistrate rejects a Section 24 appeal, a Second Appeal lies before the State Chief Electoral Officer (CEO) within 30 days."
     ],
     steps_hi: [
-      "लिखित आदेश प्राप्त करें: केवल मौखिक मनाही का कोई कानूनी मूल्य नहीं है। लिखित सकारण आदेश की प्रति माँगें।",
-      "15 दिन की समय सीमा: आदेश की तारीख से 15 दिनों के भीतर ज़िला मजिस्ट्रेट (DEO) को प्रथम अपील दाखिल करें।",
-      "अपील का ज्ञापन तैयार करें: स्पष्ट रूप से लिखें कि आपके दस्तावेज़ कैसे वैध हैं और अस्वीकृति क्यों गलत है।",
-      "नाममात्र शुल्क: यदि राज्य के नियमों में आवश्यक हो तो निर्धारित कोर्ट फ़ीस स्टाम्प लगाएँ।",
-      "CEO के पास दूसरी अपील: यदि डीएम अपील खारिज करे, तो राज्य के मुख्य निर्वाचन अधिकारी (CEO) के पास दूसरी अपील का अधिकार है।"
+      "औपचारिक लिखित आदेश प्राप्त करें: ERO से कारणों सहित औपचारिक लिखित आदेश की प्रति प्राप्त करें, क्योंकि अपील के लिए विवादित आदेश का होना आवश्यक है।",
+      "लागू अपील मार्ग पहचानें: धारा 22 या 23 के तहत आदेशों के लिए, निर्वाचक रजिस्ट्रीकरण नियम 1960 के नियम 27 के तहत 15 दिनों में ज़िला मजिस्ट्रेट (DEO) को प्रथम अपील दाखिल करें। अंतिम प्रकाशन पूर्व नियम 20/21/21A के निर्णयों में नियम 23 लागू होता है।",
+      "अपील के आधार तैयार करें: प्रस्तुत दस्तावेज़ों और संबंधित वैधानिक नियमों का हवाला देते हुए विस्तार से बताएं कि अस्वीकृति क्यों त्रुटिपूर्ण थी।",
+      "निर्धारित शुल्क: यदि राज्य के नियमों में आवश्यक हो तो कोर्ट फ़ीस स्टाम्प की जाँच करें।",
+      "द्वितीय अपील मार्ग: यदि डीएम धारा 24 की अपील खारिज करते हैं, तो 30 दिनों में राज्य मुख्य निर्वाचन अधिकारी (CEO) के समक्ष द्वितीय अपील का अधिकार है।"
     ],
     docs_en: [
       "Certified copy of the ERO's rejection order.",
@@ -595,8 +603,8 @@ var SIR_SCENARIOS = [
       "समर्थक पहचान और निवास प्रमाण पत्र।",
       "अपील के आधारों का ज्ञापन।"
     ],
-    esc_en: "First Appeal to DM (within 15 days) → Second Appeal to State CEO (within 30 days) → Writ Petition under Article 226 in the High Court.",
-    esc_hi: "डीएम को प्रथम अपील (15 दिन) → मुख्य निर्वाचन अधिकारी (CEO) को द्वितीय अपील (30 दिन) → उच्च न्यायालय में अनुच्छेद 226 रिट याचिका।"
+    esc_en: "First Appeal under Rule 27 (15 days to DM) → Second Appeal under Section 24 (30 days to State CEO). Pre-publication revision appeals follow Rule 23. Extraordinary legal remedy: Writ petition under Article 226 in the High Court.",
+    esc_hi: "नियम 27 के तहत प्रथम अपील (15 दिन, डीएम) → धारा 24 के तहत द्वितीय अपील (30 दिन, राज्य CEO)। प्रकाशन पूर्व पुनरीक्षण में नियम 23 लागू। असाधारण उपाय: उच्च न्यायालय में अनुच्छेद 226 रिट याचिका।"
   },
   {
     id: "correction",
@@ -704,7 +712,9 @@ function render(){
       '<div class="sir-dest"><b>'+(lang==="hi"?"गंतव्य: ":"Destination: ")+'</b><a href="'+sc.url+'" target="_blank" rel="noopener">'+E(dest)+' ↗</a></div>' +
       '<div class="sir-grid">' +
         '<div class="sir-subbox"><h4>'+(lang==="hi"?"ज़रूरी कदम (Next Steps)":"Required Next Steps")+'</h4><ol>'+steps.map(function(s){return '<li>'+E(s)+'</li>'}).join("")+'</ol></div>' +
-        '<div class="sir-subbox"><h4>'+(lang==="hi"?"निर्धारित दस्तावेज़ (Specified Documents)":"Specified Documents")+'</h4><ul>'+docs.map(function(d){return '<li>'+E(d)+'</li>'}).join("")+'</ul></div>' +
+        '<div class="sir-subbox"><h4>'+(lang==="hi"?"प्रासंगिक हो सकने वाले दस्तावेज़ (Documents that may be relevant)":"Documents that may be relevant")+'</h4>' +
+        '<p class="sir-doc-note">'+(lang==="hi"?"नोट: विशिष्ट आवश्यकता के लिए प्राप्त नोटिस व आधिकारिक ECI निर्देशों का पालन करें; सभी मूल व प्रतियों का रिकॉर्ड रखें।":"Note: Follow the specific requirements in your official notice and current ECI instructions; always retain copies.")+'</p>' +
+        '<ul>'+docs.map(function(d){return '<li>'+E(d)+'</li>'}).join("")+'</ul></div>' +
       '</div>' +
       '<div class="sir-escalate"><b>'+(lang==="hi"?"अपील व समाधान का रास्ता (Escalation Route):":"Escalation Route:")+'</b>'+E(esc)+'</div>' +
     '</div>';
