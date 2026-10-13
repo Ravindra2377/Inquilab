@@ -10,9 +10,16 @@ An independent, static, bilingual (English & Hindi) civic reference on India's C
 - **Peaceful Protest Guide**: Lawful preparation, on-ground conduct, and legal boundaries (e.g., Section 163 BNSS / earlier Section 144 CrPC, public order limits).
 - **Detention & Custody Checklist**: Step-by-step procedural safeguards under Article 22 and Supreme Court precedents (such as *D.K. Basu*), printable as a pocket card.
 - **Voter Registration & Form 6 Guide**: How to check your status on the electoral roll, how to register via Form 6, ECI qualifying dates, and context regarding the Special Intensive Revision (SIR).
-- **Privacy-First & Self-Contained**: No cookies, no analytics, no external tracking, no third-party CDNs, and zero third-party network requests.
+- **Privacy-First & Self-Contained**: The page itself embeds no cookies, analytics, tracking scripts, web beacons, or third-party CDNs/remote fonts, and executes entirely client-side in the browser. Please note that clicking outbound links to official portals (such as the ECI portal, India Code, or Indian Kanoon) sends visitors to those external services, whose own privacy policies and server access logging apply.
 
 ---
+
+## Legal Verification & Review Status
+
+- **Content Updated**: 14 October 2026
+- **Legal Review**: Pending professional verification by qualified advocates (see [LAWYER_REVIEW.md](LAWYER_REVIEW.md))
+- **Legal Source Register**: Traceable statutory and case citations are documented in [LEGAL_SOURCE_REGISTER.csv](LEGAL_SOURCE_REGISTER.csv)
+
 
 ## Disclaimer
 
