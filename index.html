@@ -192,6 +192,50 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 44px;font
 </section>
 
 <!-- ═══ ABOUT ═══ -->
+
+<!-- ADDED: notice, RTI, quiz -->
+<section id="notice">
+<h2>Got a notice, hearing or deletion?</h2>
+<p class="sub">If your name is questioned or removed from the electoral roll, act fast. Time limits are short.</p>
+<ol class="voter-steps">
+<li><b>Do not ignore a notice.</b> Note the date, the deadline, the officer's name and the reason given. Photograph it.</li>
+<li><b>Check the roll.</b> Search your name on voters.eci.gov.in and on your state Chief Electoral Officer's website, where draft and final lists or deletion lists are published.</li>
+<li><b>Attend the hearing if you are called.</b> Take your ID, address proof and the documents the notice lists. Ask for a written acknowledgement of everything you submit.</li>
+<li><b>If your name is missing,</b> apply with Form 6. <b>If details are wrong,</b> use Form 8. <b>If you object to someone else's entry,</b> that is Form 7. Keep every receipt and reference number.</li>
+<li><b>If your name is removed,</b> ask for the written order giving the reasons. Appeals against the Electoral Registration Officer's decision go first to the District Magistrate and then to the Chief Electoral Officer, within short time limits stated in the rules and the order.</li>
+<li><b>Still stuck?</b> A writ petition to the High Court under Article 226 is possible. Call the voter helpline 1950 or free legal aid 15100 first.</li>
+</ol>
+<p class="note">Procedures during the SIR can differ by state and change by notice. Follow your state's official notices and confirm all forms, time limits and appeal steps with the ECI or a lawyer.</p>
+</section>
+
+<section id="rti">
+<h2>RTI and petitions</h2>
+<p class="sub">Asking questions in writing is a lawful, peaceful way to hold institutions to account.</p>
+<div class="cols">
+<div class="card do"><h3>Right to Information Act, 2005</h3><ul>
+<li>Any citizen can ask a public authority for records or information.</li>
+<li>Write to the authority's Public Information Officer (PIO). Central bodies can be reached online at rtionline.gov.in; states have their own portals or paper forms.</li>
+<li>A small fee applies, and families below the poverty line are exempt. The fee differs by state.</li>
+<li>A reply is due in 30 days, or 48 hours where life or liberty is at stake.</li>
+<li>If unsatisfied: first appeal to the First Appellate Authority within 30 days, then second appeal to the Information Commission within 90 days.</li></ul></div>
+<div class="card do"><h3>A sample RTI question</h3><ul>
+<li>"For my assembly constituency, please give the number of names added and deleted from the electoral roll between [date] and [date], with the notice or order under which deletions were made."</li>
+<li>Ask for documents and numbers, not opinions. Keep it short and specific.</li>
+<li>Some information may be refused under the Act's exemptions, such as personal data. You can appeal.</li></ul></div>
+<div class="card lim"><h3>Petitions and complaints</h3><ul>
+<li>Write to the Electoral Registration Officer, District Magistrate or Chief Electoral Officer. Keep a dated copy and proof of delivery.</li>
+<li>General grievances against central government bodies can be filed on CPGRAMS (pgportal.gov.in).</li>
+<li>You can also petition your MP or MLA, and approach the courts under Articles 32 and 226.</li></ul></div>
+</div>
+<p class="note">Fees, portals and time limits change. Confirm on the official RTI portal or with legal aid.</p>
+</section>
+
+<section id="quiz">
+<h2>Test your knowledge</h2>
+<p class="sub">Five quick questions on what you have read.</p>
+<div id="quiz-box"></div>
+</section>
+
 <section id="about">
   <h2 data-h="इस पहल के बारे में">About this initiative</h2>
   <p class="sub" data-h="यह एक स्वतंत्र नागरिक पहल है।">An independent citizen initiative.</p>
@@ -389,5 +433,64 @@ document.getElementById("en").onclick=function(){setLang("en")};
 document.getElementById("hi").onclick=function(){setLang("hi")};
 render();
 </script>
+
+<style>
+.qz{background:var(--card);border:1px solid var(--line);padding:16px;margin-bottom:12px}
+.qz p{margin:0 0 10px;font-weight:600}
+.qz button{display:block;width:100%;text-align:left;font:inherit;background:none;color:var(--ink);border:1px solid var(--line);padding:8px 12px;margin-bottom:6px;cursor:pointer}
+.qz button.ok{border-color:var(--grn);background:var(--card);box-shadow:inset 4px 0 0 var(--grn)}
+.qz button.no{border-color:var(--saf);box-shadow:inset 4px 0 0 var(--saf)}
+.qz .why{font-size:.95rem;color:var(--mute);margin-top:6px}
+.jlink{display:inline-block;margin-top:4px;font-size:.9rem}
+@media print{#detain::after{content:"Educational information, not legal advice. Verify with a lawyer or a legal aid authority.";display:block;font-size:12px;margin-top:14px}}
+</style>
+<script>
+(function(){
+  var nav=document.querySelector(".top nav");
+  if(nav){[["#notice","Notice?"],["#rti","RTI"],["#quiz","Quiz"]].forEach(function(l){
+    var a=document.createElement("a");a.href=l[0];a.textContent=l[1];nav.appendChild(a);});}
+
+  var cl=document.getElementById("cases-list");
+  function addLinks(){
+    if(!cl)return;
+    [].slice.call(cl.querySelectorAll(".case")).forEach(function(c){
+      if(c.querySelector(".jlink"))return;
+      var name=c.querySelector("b");if(!name)return;
+      var a=document.createElement("a");a.className="jlink";a.target="_blank";a.rel="noopener";
+      a.href="https://indiankanoon.org/search/?formInput="+encodeURIComponent(name.textContent);
+      a.textContent="Find the judgment (unofficial search, verify at sci.gov.in)";
+      c.appendChild(document.createElement("br"));c.appendChild(a);});
+  }
+  if(cl){addLinks();new MutationObserver(addLinks).observe(cl,{childList:true});}
+
+  var Q=[
+   ["Which Article protects the right to assemble peaceably and without arms?",["Article 14","Article 19(1)(b)","Article 21","Article 32"],1,"Article 19(1)(b). Reasonable restrictions can apply under Article 19(3)."],
+   ["After arrest, within how long must you be produced before a magistrate (excluding travel time)?",["12 hours","24 hours","48 hours","7 days"],1,"24 hours, under Article 22(2)."],
+   ["Which Article lets you go straight to the Supreme Court for a fundamental right?",["Article 21","Article 32","Article 51A","Article 324"],1,"Article 32. High Courts can act under Article 226."],
+   ["In the voter-roll debate, what does SIR stand for?",["Special Summary Revision","Special Intensive Revision","State Identity Register","Summary of Integrated Rolls"],1,"Special Intensive Revision, a more intensive exercise than the routine revision."],
+   ["Which law lets citizens ask public authorities for information?",["Right to Information Act, 2005","Representation of the People Act","Contempt of Courts Act","Public Order Act"],0,"The Right to Information Act, 2005."]
+  ];
+  var box=document.getElementById("quiz-box");if(!box)return;
+  var score=0,done=0;
+  var res=document.createElement("p");res.setAttribute("aria-live","polite");res.style.fontWeight="800";
+  Q.forEach(function(q){
+    var d=document.createElement("div");d.className="qz";
+    var p=document.createElement("p");p.textContent=q[0];d.appendChild(p);
+    var why=document.createElement("div");why.className="why";
+    q[1].forEach(function(o,i){
+      var b=document.createElement("button");b.textContent=o;
+      b.onclick=function(){
+        if(d.dataset.a)return;d.dataset.a="1";done++;
+        var btns=d.querySelectorAll("button");
+        btns[q[2]].className="ok";
+        if(i===q[2]){score++;why.textContent="Correct. "+q[3];}else{b.className="no";why.textContent="Not quite. "+q[3];}
+        if(done===Q.length)res.textContent="Your score: "+score+" of "+Q.length;
+      };
+      d.appendChild(b);});
+    d.appendChild(why);box.appendChild(d);});
+  box.appendChild(res);
+})();
+</script>
+
 </body>
 </html>

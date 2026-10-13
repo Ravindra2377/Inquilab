@@ -1,0 +1,20 @@
+name: check
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check JavaScript syntax and third-party requests
+        run: |
+          python3 - <<'PY'
+          import re, sys
+          s = open("index.html", encoding="utf-8").read()
+          js = "\n".join(re.findall(r"<script>(.*?)</script>", s, re.S))
+          open("t.js", "w", encoding="utf-8").write(js)
+          bad = re.findall(r'(?:src|href)="(https?://(?!voters\.eci\.gov\.in|legislative\.gov\.in|indiankanoon\.org|rtionline\.gov\.in|pgportal\.gov\.in)[^"]+)"', s)
+          bad = [b for b in bad if "YOUR-SITE-URL" not in b]
+          if bad:
+              print("Unexpected external links:", bad); sys.exit(1)
+          PY
+          node --check t.js
