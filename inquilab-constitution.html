@@ -5,15 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Inquilab Zindabad – Know your Constitution, protest peacefully</title>
 <meta name="description" content="Your fundamental rights, the rules of peaceful protest, voter registration guide, and what to do if detained — in plain language, in English and Hindi.">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;800&family=Yatra+One&display=swap">
+<meta name="theme-color" content="#0d1b4c">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Inquilab Zindabad – Know your Constitution, protest peacefully">
+<meta property="og:description" content="Your fundamental rights, the rules of peaceful protest, voter registration guide, and what to do if detained — in plain language, in English and Hindi.">
+<meta property="og:locale" content="en_IN">
+<!-- <meta property="og:url" content="https://example.com/"> -->
+<!-- <meta property="og:image" content="https://example.com/og-image.png"> -->
+<meta name="twitter:card" content="summary">
 <style>
+@font-face{font-family:'Mukta';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/mukta-400-devanagari.woff2') format('woff2');unicode-range:U+0900-097F,U+1CD0-1CF4,U+1CF7-1CF9,U+200C-200D,U+20A8,U+20B9,U+20F0,U+25CC,U+A830-A839,U+A8E0-A8FF,U+11B00-11B0A}
+@font-face{font-family:'Mukta';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/mukta-400-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Mukta';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/mukta-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+@font-face{font-family:'Mukta';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/mukta-600-devanagari.woff2') format('woff2');unicode-range:U+0900-097F,U+1CD0-1CF4,U+1CF7-1CF9,U+200C-200D,U+20A8,U+20B9,U+20F0,U+25CC,U+A830-A839,U+A8E0-A8FF,U+11B00-11B0A}
+@font-face{font-family:'Mukta';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/mukta-600-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Mukta';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/mukta-600-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+@font-face{font-family:'Mukta';font-style:normal;font-weight:800;font-display:swap;src:url('fonts/mukta-800-devanagari.woff2') format('woff2');unicode-range:U+0900-097F,U+1CD0-1CF4,U+1CF7-1CF9,U+200C-200D,U+20A8,U+20B9,U+20F0,U+25CC,U+A830-A839,U+A8E0-A8FF,U+11B00-11B0A}
+@font-face{font-family:'Mukta';font-style:normal;font-weight:800;font-display:swap;src:url('fonts/mukta-800-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Mukta';font-style:normal;font-weight:800;font-display:swap;src:url('fonts/mukta-800-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+@font-face{font-family:'Yatra One';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/yatra-one-400-devanagari.woff2') format('woff2');unicode-range:U+0900-097F,U+1CD0-1CF4,U+1CF7-1CF9,U+200C-200D,U+20A8,U+20B9,U+20F0,U+25CC,U+A830-A839,U+A8E0-A8FF,U+11B00-11B0A}
+@font-face{font-family:'Yatra One';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/yatra-one-400-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Yatra One';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/yatra-one-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
 :root{--bg:#f6f8fb;--ink:#0d1b4c;--mute:#46506b;--line:#d3d9e6;--card:#fff;--chakra:#2346c8;--saf:#ff8a1f;--grn:#138808;--link:#1d3fb8;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1226;--ink:#eef1fb;--mute:#aab3cc;--line:#26314f;--card:#141d38;--chakra:#7f9bff;--saf:#ffa24a;--grn:#4fd04a;--link:#8fb0ff;color-scheme:dark}}
 :root[data-theme="dark"]{--bg:#0b1226;--ink:#eef1fb;--mute:#aab3cc;--line:#26314f;--card:#141d38;--chakra:#7f9bff;--saf:#ffa24a;--grn:#4fd04a;--link:#8fb0ff;color-scheme:dark}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *,*:before,*:after{box-sizing:inherit}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Mukta,"Noto Sans Devanagari",system-ui,sans-serif}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Mukta,system-ui,"Noto Sans Devanagari","Segoe UI",sans-serif}
 a{color:var(--link)}
 :focus-visible{outline:3px solid var(--saf);outline-offset:2px}
 .wrap{max-width:900px;margin:0 auto;padding:0 20px}
@@ -22,21 +45,21 @@ a{color:var(--link)}
 .lang button{font:inherit;font-weight:600;background:none;border:1px solid var(--line);color:var(--ink);padding:3px 12px;cursor:pointer}
 .lang button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
 .hero{padding:52px 0 34px;border-left:10px solid var(--saf);padding-left:22px;margin-top:28px}
-.hero .slogan{font-family:"Yatra One",serif;font-size:clamp(2.8rem,11vw,6rem);line-height:1.05;margin:0}
+.hero .slogan{font-family:"Yatra One",Georgia,serif;font-size:clamp(2.8rem,11vw,6rem);line-height:1.05;margin:0}
 .hero h1{font-size:clamp(1.3rem,4vw,1.9rem);margin:14px 0 8px;font-weight:800;color:var(--chakra)}
 .hero p{max-width:58ch;color:var(--mute);margin:0 0 20px;font-size:1.1rem}
-.btn{display:inline-block;background:var(--chakra);color:var(--bg);font:800 1rem Mukta,sans-serif;padding:11px 20px;text-decoration:none;border:0;cursor:pointer;margin:0 8px 8px 0}
+.btn{display:inline-block;background:var(--chakra);color:var(--bg);font:800 1rem Mukta,system-ui,sans-serif;padding:11px 20px;text-decoration:none;border:0;cursor:pointer;margin:0 8px 8px 0}
 .btn.alt{background:none;color:var(--ink);border:2px solid var(--ink)}
-.pre{margin:34px 0 0;padding:14px 18px;background:var(--card);border:1px solid var(--line);font-family:"Yatra One",serif;font-size:1.15rem}
+.pre{margin:34px 0 0;padding:14px 18px;background:var(--card);border:1px solid var(--line);font-family:"Yatra One",Georgia,serif;font-size:1.15rem}
 section{padding:38px 0 8px}
-h2{font-family:"Yatra One",serif;font-weight:400;font-size:1.8rem;margin:0 0 6px}
+h2{font-family:"Yatra One",Georgia,serif;font-weight:400;font-size:1.8rem;margin:0 0 6px}
 .sub{color:var(--mute);margin:0 0 16px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
-.chips button{font:600 .95rem Mukta,sans-serif;background:var(--card);color:var(--ink);border:1px solid var(--line);padding:5px 14px;cursor:pointer}
+.chips button{font:600 .95rem Mukta,system-ui,sans-serif;background:var(--card);color:var(--ink);border:1px solid var(--line);padding:5px 14px;cursor:pointer}
 .chips button[aria-pressed=true]{background:var(--chakra);color:var(--bg);border-color:var(--chakra)}
 .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
 .card{background:var(--card);border:1px solid var(--line);padding:16px}
-.card .art{display:inline-block;font:800 .95rem Mukta,sans-serif;color:var(--bg);background:var(--chakra);padding:1px 10px;margin-bottom:8px}
+.card .art{display:inline-block;font:800 .95rem Mukta,system-ui,sans-serif;color:var(--bg);background:var(--chakra);padding:1px 10px;margin-bottom:8px}
 .card h3{margin:0 0 6px;font-size:1.08rem;line-height:1.3}
 .card p{margin:0;color:var(--mute);font-size:.98rem}
 .cols{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
@@ -112,7 +135,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 44px;font
 <!-- ═══ VOTER ROLL & FORM 6 GUIDE ═══ -->
 <section id="voter">
   <h2 data-h="मतदाता सूची और फ़ॉर्म 6 गाइड">Voter-roll &amp; Form 6 guide</h2>
-  <p class="sub" data-h="चुनाव आयोग ने SIR के बाद नई सूचियाँ बनाई हैं। जाँचें कि आपका नाम है या नहीं, और नहीं है तो नीचे के चरणों से जुड़ें।">After the SIR exercise, the Election Commission has prepared updated rolls. Check whether your name is on the list, and if not, follow the steps below to register.</p>
+  <p class="sub" data-h="आपके राज्य के आधार पर, भारत निर्वाचन आयोग का विशेष गहन पुनरीक्षण (SIR) वर्तमान में जारी हो सकता है या पूरा हो चुका हो सकता है। जाँचें कि आपका नाम वर्तमान सूची में है या नहीं, और यदि नहीं है तो पंजीकरण या सुधार के लिए नीचे दिए गए चरणों का पालन करें।">Depending on your state, the Election Commission of India's Special Intensive Revision (SIR) may be ongoing or completed. Check whether your name is on the current roll, and if not, follow the steps below to register or correct your details.</p>
 
   <h3 data-h="क्या मेरा नाम सूची में है?">Is my name on the list?</h3>
   <ol class="voter-steps" id="voter-check"></ol>
@@ -122,7 +145,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 44px;font
 
   <h3 data-h="याद रखें">Remember</h3>
   <div class="cols" id="voter-tips"></div>
-  <p class="note" data-h="निर्वाचन आयोग की आधिकारिक वेबसाइट: voters.eci.gov.in — ऑनलाइन और ऑफ़लाइन दोनों तरीके मान्य हैं।">Official ECI portal: <a href="https://voters.eci.gov.in/" target="_blank" rel="noopener">voters.eci.gov.in</a> — both online and offline methods are accepted.</p>
+  <p class="note" data-h="निर्वाचन आयोग की आधिकारिक वेबसाइट: <a href='https://voters.eci.gov.in/' target='_blank' rel='noopener'>voters.eci.gov.in</a> — ऑनलाइन और ऑफ़लाइन दोनों तरीके मान्य हैं।">Official ECI portal: <a href="https://voters.eci.gov.in/" target="_blank" rel="noopener">voters.eci.gov.in</a> — both online and offline methods are accepted.</p>
 </section>
 
 <!-- ═══ ABOUT ═══ -->
@@ -150,7 +173,7 @@ var R=[
 ["19(1)(a)",["s","p"],"Freedom of speech and expression","You can speak, write, post and chant slogans. Only reasonable restrictions under Article 19(2) apply, such as incitement to an offence.","बोलने और अभिव्यक्ति की आज़ादी","आप बोल, लिख, पोस्ट कर और नारे लगा सकते हैं। केवल अनुच्छेद 19(2) के उचित प्रतिबंध लागू होते हैं, जैसे अपराध के लिए उकसाना।"],
 ["19(1)(b)",["p"],"Assemble peaceably and without arms","Citizens can gather and protest if they are peaceful and unarmed. Reasonable restrictions are allowed for public order and the sovereignty and integrity of India (Article 19(3)).","शांतिपूर्वक, बिना हथियार इकट्ठा होने का अधिकार","नागरिक शांतिपूर्ण और निहत्थे रहकर इकट्ठा हो सकते हैं और प्रदर्शन कर सकते हैं। सार्वजनिक व्यवस्था आदि के हित में उचित प्रतिबंध संभव हैं (अनुच्छेद 19(3))।"],
 ["19(1)(c)",["p"],"Form associations and unions","You can form unions, collectives and organisations, including political ones.","संगठन बनाने का अधिकार","आप यूनियन, समूह और संगठन बना सकते हैं।"],
-["19(2)–(3)",["p","s"],"Reasonable restrictions, not a blanket ban","Restrictions must be backed by law and be reasonable and proportionate. Disagreement with the government is not, by itself, a ground to stop a protest.","उचित प्रतिबंध, पूरी रोक नहीं","प्रतिबंध कानून से और उचित व अनुपातिक होने चाहिए। सरकार से असहमति अपने आप में विरोध रोकने का आधार नहीं है।"],
+["19(2)–(3)",["p","s"],"Reasonable restrictions, not a blanket ban","Restrictions must be backed by law and be reasonable and proportionate. Disagreement with the government is not, by itself, a ground to stop a protest.","उचित प्रतिबंध, पूरी रोक नहीं","प्रतिबंध कानून से और उचित व आनुपातिक होने चाहिए। सरकार से असहमति अपने आप में विरोध रोकने का आधार नहीं है।"],
 ["20(3)",["a"],"No forced self-incrimination","A person accused of an offence cannot be compelled to be a witness against themselves.","खुद के ख़िलाफ़ गवाही नहीं","आरोपी को अपने ही ख़िलाफ़ गवाह बनने के लिए मजबूर नहीं किया जा सकता।"],
 ["21",["a","c"],"Life and personal liberty","No one can be deprived of life or personal liberty except by procedure established by law. Courts have read dignity and fair treatment in custody into it.","जीवन और व्यक्तिगत स्वतंत्रता","कानून द्वारा स्थापित प्रक्रिया के बिना किसी को जीवन या स्वतंत्रता से वंचित नहीं किया जा सकता। इसमें गरिमा और हिरासत में निष्पक्ष व्यवहार शामिल है।"],
 ["22",["a"],"Protection against arbitrary arrest","If arrested you must be told the grounds, you may consult a lawyer of your choice, and you must be produced before a magistrate within 24 hours, excluding travel time.","गिरफ़्तारी से सुरक्षा","गिरफ़्तारी पर आपको कारण बताया जाना चाहिए, आप अपनी पसंद के वकील से मिल सकते हैं, और 24 घंटे के भीतर (यात्रा समय छोड़कर) मजिस्ट्रेट के सामने पेश करना ज़रूरी है।"],
@@ -206,7 +229,7 @@ var P=[
 "No weapons, no incitement to violence, no hate speech.",
 "Loudspeakers are regulated, especially at night."
 ],[
-"निषेधात्मक आदेश (धारा 163 BNSS, पहले धारा 144 CrPC) सभाओं पर रोक लगा सकते हैं। ये तर्कसंगत और अनुपातिक होने चाहिए।",
+"निषेधात्मक आदेश (धारा 163 BNSS, पहले धारा 144 CrPC) सभाओं पर रोक लगा सकते हैं। ये तर्कसंगत और आनुपातिक होने चाहिए।",
 "विरोध प्रदर्शन सार्वजनिक सड़कों पर अनिश्चितकाल तक नहीं हो सकते — शाहीन बाग़ मामले में सुप्रीम कोर्ट ने ऐसा कहा।",
 "कोई हथियार नहीं, हिंसा के लिए उकसावा नहीं, नफ़रत भरा भाषण नहीं।",
 "लाउडस्पीकर पर नियम लागू हैं, ख़ासतौर पर रात में।"
@@ -220,7 +243,7 @@ var CASES=[
 ["In re Ramlila Maidan Incident (2012)","Peaceful assembly and protest are fundamental rights; the Court criticised the midnight police action on sleeping protesters.","शांतिपूर्ण सभा और विरोध मौलिक अधिकार हैं; कोर्ट ने सोए हुए प्रदर्शनकारियों पर आधी रात की पुलिस कार्रवाई की आलोचना की।"],
 ["Shreya Singhal v. Union of India (2015)","Only speech that amounts to incitement can be punished, not mere discussion or advocacy.","केवल उकसाने वाली बात दंडनीय है, सामान्य चर्चा या पक्ष रखना नहीं।"],
 ["Mazdoor Kisan Shakti Sangathan v. Union of India (2018)","A blanket ban on protests at Jantar Mantar was struck down; authorities must balance protest with residents' rights.","जंतर-मंतर पर विरोध पर पूर्ण प्रतिबंध रद्द किया गया; अधिकारियों को विरोध और निवासियों के अधिकारों में संतुलन बनाना चाहिए।"],
-["Anuradha Bhasin v. Union of India (2020)","Section 144 orders and internet shutdowns must be necessary, proportionate, published and open to judicial review.","धारा 144 के आदेश और इंटरनेट बंदी आवश्यक, अनुपातिक, प्रकाशित और न्यायिक समीक्षा के लिए खुले होने चाहिए।"],
+["Anuradha Bhasin v. Union of India (2020)","Section 144 orders and internet shutdowns must be necessary, proportionate, published and open to judicial review.","धारा 144 के आदेश और इंटरनेट बंदी आवश्यक, आनुपातिक, प्रकाशित और न्यायिक समीक्षा के लिए खुले होने चाहिए।"],
 ["Amit Sahni v. Commissioner of Police (2020)","Public ways cannot be occupied indefinitely for protest.","सार्वजनिक मार्गों पर विरोध प्रदर्शन अनिश्चितकाल तक नहीं किया जा सकता।"]
 ];
 
@@ -229,14 +252,14 @@ var VC=[
 ["<b>Go online</b> Visit <a href='https://voters.eci.gov.in/' target='_blank' rel='noopener'>voters.eci.gov.in</a> or the Voter Helpline App (Android & iOS).","<b>ऑनलाइन जाएँ</b> <a href='https://voters.eci.gov.in/' target='_blank' rel='noopener'>voters.eci.gov.in</a> या Voter Helpline App (Android/iOS) खोलें।"],
 ["<b>Search by details</b> Enter your name, father's/husband's name, age, gender and state. Or search by EPIC number (your voter-ID number).","<b>विवरण से खोजें</b> नाम, पिता/पति का नाम, उम्र, लिंग और राज्य डालें। या EPIC नंबर (मतदाता पहचान पत्र संख्या) से खोजें।"],
 ["<b>Check your details</b> If your entry appears, confirm that the name, photo, address and polling booth are correct. Report errors using Form 8.","<b>विवरण जाँचें</b> अगर नाम दिखे तो नाम, फ़ोटो, पता और मतदान केंद्र सही हैं या नहीं जाँचें। गलती हो तो फ़ॉर्म 8 से सुधार कराएँ।"],
-["<b>Not found?</b> Don't panic. Your name may have been dropped during the SIR update. Apply fresh using Form 6 (see below).","<b>नहीं मिला?</b> घबराएँ नहीं। SIR अपडेट में नाम हट सकता है। फ़ॉर्म 6 से नया आवेदन करें (नीचे देखें)।"]
+["<b>Not found?</b> Don't panic. Depending on your state, the SIR (Special Intensive Revision) may be ongoing or completed. If your name is missing, apply fresh using Form 6, keep your reference number, and note the deadline for claims and objections in your state's schedule.","<b>नहीं मिला?</b> घबराएँ नहीं। आपके राज्य के आधार पर SIR (विशेष गहन पुनरीक्षण) जारी हो सकता है या पूरा हो चुका हो सकता है। यदि नाम सूची में नहीं है, तो फ़ॉर्म 6 से नया आवेदन करें, अपनी संदर्भ संख्या सुरक्षित रखें, और अपने राज्य की समय-सारणी में दावे और आपत्तियों की अंतिम तिथि का ध्यान रखें।"]
 ];
 
 /* Form 6 steps: [en, hi] */
 var VF=[
-["<b>Who can apply</b> Any Indian citizen who is 18 or older on the qualifying date (1 January of the current year) and is ordinarily resident at the address.","<b>कौन आवेदन कर सकता है</b> कोई भी भारतीय नागरिक जो अर्हता तिथि (चालू वर्ष की 1 जनवरी) को 18 वर्ष या अधिक हो और उस पते पर सामान्यतः निवास करता हो।"],
-["<b>Online</b> Go to <a href='https://voters.eci.gov.in/' target='_blank' rel='noopener'>voters.eci.gov.in</a> → New Registration (Form 6). Upload a passport-size photo, age proof (birth certificate, Aadhaar, Class-10 marksheet, passport) and address proof (ration card, utility bill, bank passbook, rent agreement).","<b>ऑनलाइन</b> <a href='https://voters.eci.gov.in/' target='_blank' rel='noopener'>voters.eci.gov.in</a> → New Registration (फ़ॉर्म 6)। पासपोर्ट-साइज़ फ़ोटो, आयु प्रमाण (जन्म प्रमाण पत्र, आधार, 10वीं मार्कशीट, पासपोर्ट) और पता प्रमाण (राशन कार्ड, बिजली बिल, बैंक पासबुक, किराया अनुबंध) अपलोड करें।"],
-["<b>Offline</b> Download Form 6 from the ECI site, fill it, attach two passport photos and self-attested copies of the proofs, and submit it to the Electoral Registration Officer (ERO) of your constituency or your nearest BLO (Booth Level Officer).","<b>ऑफ़लाइन</b> ECI वेबसाइट से फ़ॉर्म 6 डाउनलोड करें, भरें, दो पासपोर्ट फ़ोटो और प्रमाण-पत्रों की स्व-सत्यापित प्रतियाँ लगाएँ, और अपने निर्वाचन क्षेत्र के ERO या नज़दीकी BLO (बूथ लेवल ऑफ़िसर) को जमा करें।"],
+["<b>Who can apply</b> Any Indian citizen who is ordinarily resident at the address. The ECI now has four qualifying dates each year (1 January, 1 April, 1 July and 1 October), and you can apply in advance once you are 17 or older. Check the ECI site for the current rules.","<b>कौन आवेदन कर सकता है</b> कोई भी भारतीय नागरिक जो उस पते पर सामान्यतः निवास करता हो। निर्वाचन आयोग के अब प्रतिवर्ष चार अर्हता तिथियाँ हैं (1 जनवरी, 1 अप्रैल, 1 जुलाई और 1 अक्टूबर), और 17 वर्ष या उससे अधिक आयु होने पर अग्रिम आवेदन किया जा सकता है। वर्तमान नियमों के लिए ECI वेबसाइट देखें।"],
+["<b>Online</b> Go to <a href='https://voters.eci.gov.in/' target='_blank' rel='noopener'>voters.eci.gov.in</a> → New Registration (Form 6). Upload a passport-size photo, age proof (birth certificate, Aadhaar, Class-10 marksheet, passport) and address proof (ration card, utility bill, bank passbook, rent agreement) as listed on the current Form 6.","<b>ऑनलाइन</b> <a href='https://voters.eci.gov.in/' target='_blank' rel='noopener'>voters.eci.gov.in</a> → New Registration (फ़ॉर्म 6)। पासपोर्ट-साइज़ फ़ोटो, आयु प्रमाण (जन्म प्रमाण पत्र, आधार, 10वीं मार्कशीट, पासपोर्ट) और पता प्रमाण (राशन कार्ड, बिजली बिल, बैंक पासबुक, किराया अनुबंध) जैसी सामग्री, जैसा कि वर्तमान फ़ॉर्म 6 पर सूचीबद्ध है, अपलोड करें।"],
+["<b>Offline</b> Download Form 6 from the ECI site, fill it, attach a recent passport-size photo and copies of the required documents as listed on the current form (including proof of age and address as listed on the current Form 6), and submit it to the Electoral Registration Officer (ERO) of your constituency or your nearest BLO (Booth Level Officer).","<b>ऑफ़लाइन</b> ECI वेबसाइट से फ़ॉर्म 6 डाउनलोड करें, भरें, एक हालिया पासपोर्ट-साइज़ फ़ोटो और वर्तमान फ़ॉर्म पर सूचीबद्ध आवश्यक दस्तावेज़ों की प्रतियाँ (आयु और पते के प्रमाण सहित, जैसा कि वर्तमान फ़ॉर्म 6 पर सूचीबद्ध है) लगाएँ, और अपने निर्वाचन क्षेत्र के ERO या नज़दीकी BLO (बूथ लेवल ऑफ़िसर) को जमा करें।"],
 ["<b>Track your application</b> Note the reference number. Track status on the portal or call 1950. The BLO will visit your address for verification.","<b>आवेदन ट्रैक करें</b> संदर्भ संख्या नोट करें। पोर्टल पर या 1950 पर कॉल करके स्थिति जानें। BLO सत्यापन के लिए आपके पते पर आएगा।"],
 ["<b>Receive your EPIC</b> Once approved, you'll receive your Electoral Photo ID Card (EPIC). You can also download the e-EPIC from the portal.","<b>EPIC प्राप्त करें</b> स्वीकृति के बाद मतदाता फ़ोटो पहचान पत्र (EPIC) मिलेगा। आप e-EPIC भी पोर्टल से डाउनलोड कर सकते हैं।"]
 ];
@@ -244,8 +267,8 @@ var VF=[
 /* Voter tips: [en_title, hi_title, en_text, hi_text] */
 var VT=[
 ["It's free","यह मुफ़्त है","Registration and the voter ID are completely free. No agent or tout can charge you for it.","रजिस्ट्रेशन और मतदाता पहचान पत्र पूरी तरह मुफ़्त है। कोई दलाल या एजेंट इसके लिए पैसे नहीं ले सकता।"],
-["No ID needed to vote","वोट देने के लिए EPIC ज़रूरी नहीं","You can vote with 12 other IDs including Aadhaar, passport, MNREGA card and PAN.","आप आधार, पासपोर्ट, मनरेगा कार्ड और पैन सहित 12 अन्य पहचान पत्रों से भी वोट दे सकते हैं।"],
-["SIR and your roll","SIR और आपकी सूची","The Summary of the Integrated Rolls (SIR) is a routine update, not a re-registration drive. If your name was dropped, applying via Form 6 is the fastest fix.","SIR (समेकित मतदाता सूची का सारांश) एक नियमित अपडेट है, पुनः-पंजीकरण अभियान नहीं। नाम हटा हो तो फ़ॉर्म 6 सबसे तेज़ उपाय है।"]
+["EPIC isn't the only accepted ID","वोट के लिए सिर्फ़ EPIC ही मान्य नहीं","You must be registered on the electoral roll to vote. If you do not have your EPIC (voter ID card), you can show one of the other photo identity documents approved by the ECI (for example Aadhaar card, passport, driving licence, PAN card, or MGNREGA job card). Check the full list on the official ECI site (voters.eci.gov.in), as approved documents can change.","मतदान के लिए आपका नाम मतदाता सूची में होना अनिवार्य है। यदि आपके पास EPIC (मतदाता पहचान पत्र) नहीं है, तो आप ECI द्वारा स्वीकृत अन्य फ़ोटो पहचान पत्रों में से एक दिखा सकते हैं (उदाहरणार्थ आधार कार्ड, पासपोर्ट, ड्राइविंग लाइसेंस, पैन कार्ड, या मनरेगा जॉब कार्ड)। मान्य दस्तावेज़ों की पूरी सूची आधिकारिक ECI वेबसाइट (voters.eci.gov.in) पर देखें, क्योंकि इसमें बदलाव हो सकते हैं।"],
+["SIR and your roll","SIR और आपकी मतदाता सूची","SIR stands for Special Intensive Revision of electoral rolls, an intensive exercise conducted by the Election Commission of India (ECI), distinct from the routine Special Summary Revision. Its schedule and phases differ by state, and depending on your state, the SIR may be ongoing or completed. Check your state's schedule and official notices on voters.eci.gov.in. If your name is missing or wrong, apply with Form 6 or correct it with Form 8, keep your acknowledgement/reference number, and note the deadline for claims and objections in your state's schedule.","SIR का अर्थ है 'स्पेशल इंटेंसिव रिवीजन' (विशेष गहन पुनरीक्षण), जो भारत निर्वाचन आयोग (ECI) द्वारा आयोजित एक गहन अभियान है और नियमित 'स्पेशल समरी रिवीजन' से अलग है। प्रत्येक राज्य में इसका कार्यक्रम और चरण भिन्न होते हैं, और आपके राज्य के अनुसार यह प्रक्रिया जारी या पूरी हो सकती है। अपने राज्य की समय-सारणी और आधिकारिक सूचनाएँ voters.eci.gov.in पर देखें। यदि आपका नाम सूची में नहीं है या कोई गलती है, तो फ़ॉर्म 6 से आवेदन करें या फ़ॉर्म 8 से सुधार कराएँ, अपनी पावती/संदर्भ संख्या सुरक्षित रखें, और अपने राज्य की समय-सारणी में दावे और आपत्तियों की अंतिम तिथि का ध्यान रखें।"]
 ];
 
 /* About cards: [en_title, hi_title, en_text, hi_text] */
@@ -253,7 +276,7 @@ var AB=[
 ["No party, no agenda","कोई पार्टी नहीं, कोई एजेंडा नहीं","This site is not run by, funded by, or affiliated with any political party, NGO, or media house. It exists only to make constitutional rights accessible in simple language.","यह साइट किसी राजनीतिक दल, NGO या मीडिया संस्थान द्वारा संचालित, वित्तपोषित या संबद्ध नहीं है। यह केवल संवैधानिक अधिकारों को सरल भाषा में सुलभ बनाने के लिए है।"],
 ["No data collected","कोई डेटा नहीं लिया जाता","This page does not use cookies, analytics, tracking pixels, or login. It collects zero personal information. You can save and share it offline.","यह पेज कोई कुकीज़, एनालिटिक्स, ट्रैकिंग पिक्सेल या लॉगिन नहीं इस्तेमाल करता। यह शून्य व्यक्तिगत जानकारी एकत्र करता है। इसे ऑफ़लाइन सहेजें और साझा करें।"],
 ["Open and auditable","खुला और जाँचने योग्य","The entire source is in one HTML file. Anyone — lawyer, journalist, student — can read, verify, correct and redistribute it.","पूरा स्रोत एक HTML फ़ाइल में है। कोई भी — वकील, पत्रकार, छात्र — इसे पढ़, जाँच, सुधार और पुनर्वितरित कर सकता है।"],
-["Anonymous by design","गुमनाम, जान-बूझकर","The creators of this page do not identify themselves, because the message matters more than the messenger. This keeps the focus on the Constitution, not on any individual.","इस पेज के रचनाकार अपनी पहचान नहीं बताते, क्योंकि संदेश, संदेशवाहक से ज़्यादा महत्वपूर्ण है। इससे ध्यान संविधान पर रहता है, किसी व्यक्ति पर नहीं।"]
+["The creators choose not to publish their names","रचनाकार अपने नाम प्रकाशित नहीं करते","The creators of this page choose not to publish their names, because the message matters more than the messenger. This keeps the focus on the Constitution, not on any individual.","इस पेज के रचनाकार अपने नाम प्रकाशित न करने का विकल्प चुनते हैं, क्योंकि संदेश, संदेशवाहक से ज़्यादा महत्वपूर्ण है। इससे ध्यान संविधान पर रहता है, किसी व्यक्ति पर नहीं।"]
 ];
 
 
