@@ -26,10 +26,10 @@ Official electoral services and schedules are published at [voters.eci.gov.in](h
 
 ## How to Run Locally
 
-Because the site is a static single-page document with self-hosted assets, you do not need any build tool, Node.js, or complex environment.
+Because the site is a self-contained, static single-page document, you do not need any build tool, Node.js, or complex environment.
 
 ### Option 1: Open Directly in a Browser
-Double-click `index.html` (or `inquilab-constitution.html`) or open it in any modern browser:
+Double-click `index.html` or open it in any modern browser:
 ```bash
 # On Linux
 xdg-open index.html
@@ -50,32 +50,11 @@ Then navigate to `http://localhost:8000` in your browser.
 
 ---
 
-## Typography & Self-Hosted Fonts
+## Typography & System Fonts
 
-To protect user privacy and avoid third-party tracking, all Google Fonts requests have been removed. The site is configured to load fonts locally from the `fonts/` directory with `font-display: swap`:
-
-### Required Font Files
-The following `.woff2` files should reside in the `fonts/` directory:
-
-| Filename | Family | Weight | Subset |
-| :--- | :--- | :--- | :--- |
-| `mukta-400-devanagari.woff2` | Mukta | 400 (Regular) | Devanagari |
-| `mukta-400-latin-ext.woff2` | Mukta | 400 (Regular) | Latin Extended |
-| `mukta-400-latin.woff2` | Mukta | 400 (Regular) | Latin |
-| `mukta-600-devanagari.woff2` | Mukta | 600 (SemiBold) | Devanagari |
-| `mukta-600-latin-ext.woff2` | Mukta | 600 (SemiBold) | Latin Extended |
-| `mukta-600-latin.woff2` | Mukta | 600 (SemiBold) | Latin |
-| `mukta-800-devanagari.woff2` | Mukta | 800 (ExtraBold) | Devanagari |
-| `mukta-800-latin-ext.woff2` | Mukta | 800 (ExtraBold) | Latin Extended |
-| `mukta-800-latin.woff2` | Mukta | 800 (ExtraBold) | Latin |
-| `yatra-one-400-devanagari.woff2` | Yatra One | 400 (Regular) | Devanagari |
-| `yatra-one-400-latin-ext.woff2` | Yatra One | 400 (Regular) | Latin Extended |
-| `yatra-one-400-latin.woff2` | Yatra One | 400 (Regular) | Latin |
-
-### Fallback Font Stack
-If local font files are unavailable, the CSS falls back to system fonts:
-- **Body & Content**: `system-ui, "Noto Sans Devanagari", "Segoe UI", sans-serif`
-- **Headings & Slogans**: `Georgia, serif`
+To protect user privacy, guarantee instant rendering on 2G/weak connections, and avoid external network requests or heavy assets, the site uses native, privacy-first system fonts:
+- **Body & Content**: `system-ui, "Segoe UI", "Noto Sans Devanagari", "Nirmala UI", sans-serif`
+- **Headings & Slogans**: `Georgia, "Noto Serif Devanagari", "Nirmala UI", serif`
 
 ---
 
