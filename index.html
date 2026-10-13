@@ -62,6 +62,17 @@ ol.steps{padding-left:22px;margin:0}ol.steps li{margin-bottom:8px}
 .voter-steps li b{display:block;margin-bottom:2px}
 footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 44px;font-size:.92rem;color:var(--mute)}
 .reviewed{display:inline-block;background:var(--card);border:1px solid var(--line);padding:4px 12px;font-size:.85rem;margin-top:10px}
+.sir-action-card{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--chakra);padding:20px;margin-top:14px}
+.sir-action-card h3{margin:0 0 10px;font-size:1.25rem;color:var(--chakra)}
+.sir-dest{display:inline-block;background:var(--bg);border:1px solid var(--line);padding:6px 12px;font-weight:600;margin-bottom:14px}
+.sir-dest a{color:var(--link);font-weight:700}
+.sir-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:14px}
+.sir-subbox{background:var(--bg);border:1px solid var(--line);padding:14px}
+.sir-subbox h4{margin:0 0 8px;font-size:1rem;color:var(--ink)}
+.sir-subbox ul,.sir-subbox ol{margin:0;padding-left:18px;color:var(--mute);font-size:.95rem}
+.sir-subbox li{margin-bottom:6px}
+.sir-escalate{margin-top:14px;padding:12px 14px;border-left:4px solid var(--saf);background:var(--bg);font-size:.95rem}
+.sir-escalate b{color:var(--ink);display:block;margin-bottom:4px}
 @media print{.wrap>*:not(#detain){display:none!important}body{background:#fff;color:#000}.btn,.noprint{display:none!important}}
 </style>
 </head>
@@ -100,12 +111,20 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 44px;font
         location. Check current orders and local requirements before attending.
       </p>
 
-      <h2>Check your voter registration</h2>
+      <h2>Check your voter registration & SIR Action</h2>
       <p>
         Use the official
         <a href="https://voters.eci.gov.in/">Election Commission voter portal</a>
         to check your electoral-roll entry and current application procedures.
       </p>
+      <ul>
+        <li><b>Got an SIR notice:</b> Note the deadline and officer details, take photos, submit a written reply with address/age proof, and get a stamped acknowledgement.</li>
+        <li><b>Name missing:</b> Search on voters.eci.gov.in. If unregistered or turning 18, apply online or offline via Form 6.</li>
+        <li><b>Name dropped from earlier roll:</b> Under RPA 1950 Section 22 and Rule 21A, deletion requires notice and hearing. Re-apply via Form 6 with previous roll proof and submit a representation to the ERO.</li>
+        <li><b>Called for a hearing:</b> Attend with 2 sets of original documents and self-attested copies; demand signed attendance verification.</li>
+        <li><b>Application rejected:</b> Demand the written speaking order. File First Appeal to District Magistrate within 15 days under Section 24, RP Act 1950.</li>
+        <li><b>Correct details or shifting:</b> Submit Form 8 on the voter portal.</li>
+      </ul>
 
       <h2>Emergency and legal assistance</h2>
       <p>
@@ -127,7 +146,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 44px;font
 </noscript>
 <div class="wrap">
 <div class="top">
-  <nav><a href="#rights" data-h="अधिकार">Rights</a><a href="#protest" data-h="विरोध">Protest</a><a href="#detain" data-h="हिरासत">If detained</a><a href="#cases" data-h="फ़ैसले">Cases</a><a href="#voter" data-h="मतदाता">Voter roll</a><a href="#about" data-h="हमारे बारे में">About</a></nav>
+  <nav><a href="#rights" data-h="अधिकार">Rights</a><a href="#protest" data-h="विरोध">Protest</a><a href="#detain" data-h="हिरासत">If detained</a><a href="#cases" data-h="फ़ैसले">Cases</a><a href="#voter" data-h="मतदाता">Voter roll</a><a href="#notice" data-h="SIR एक्शन">SIR Action</a><a href="#rti" data-h="RTI">RTI</a><a href="#about" data-h="हमारे बारे में">About</a></nav>
   <div class="lang" role="group" aria-label="Language"><button id="en" aria-pressed="true">English</button><button id="hi" aria-pressed="false">हिन्दी</button></div>
 </div>
 
@@ -193,41 +212,38 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 44px;font
 
 <!-- ═══ ABOUT ═══ -->
 
-<!-- ADDED: notice, RTI -->
+<!-- ═══ SIR ACTION CENTRE ═══ -->
 <section id="notice">
-<h2>Got a notice, hearing or deletion?</h2>
-<p class="sub">If your name is questioned or removed from the electoral roll, act fast. Time limits are short.</p>
-<ol class="voter-steps">
-<li><b>Do not ignore a notice.</b> Note the date, the deadline, the officer's name and the reason given. Photograph it.</li>
-<li><b>Check the roll.</b> Search your name on voters.eci.gov.in and on your state Chief Electoral Officer's website, where draft and final lists or deletion lists are published.</li>
-<li><b>Attend the hearing if you are called.</b> Take your ID, address proof and the documents the notice lists. Ask for a written acknowledgement of everything you submit.</li>
-<li><b>If your name is missing,</b> apply with Form 6. <b>If details are wrong,</b> use Form 8. <b>If you object to someone else's entry,</b> that is Form 7. Keep every receipt and reference number.</li>
-<li><b>If your name is removed,</b> ask for the written order giving the reasons. Appeals against the Electoral Registration Officer's decision go first to the District Magistrate and then to the Chief Electoral Officer, within short time limits stated in the rules and the order.</li>
-<li><b>Still stuck?</b> A writ petition to the High Court under Article 226 is possible. Call the voter helpline 1950 or free legal aid 15100 first.</li>
-</ol>
-<p class="note">Procedures during the SIR can differ by state and change by notice. Follow your state's official notices and confirm all forms, time limits and appeal steps with the ECI or a lawyer.</p>
+  <h2 data-h="SIR व मतदाता एक्शन सेंटर">SIR & Voter Action Centre</h2>
+  <p class="sub" data-h="अपनी स्थिति चुनें — आधिकारिक पोर्टल, ज़रूरी दस्तावेज़ और अपील का सटीक रास्ता जानें:">Choose your situation — find the official portal, required documents, and exact escalation route:</p>
+
+  <div class="chips" id="sir-tabs" role="tablist" aria-label="SIR Scenarios"></div>
+  <div id="sir-content"></div>
+
+  <p class="note" data-h="कानूनी आधार: जनप्रतिनिधित्व अधिनियम, 1950 (धारा 21, 22, 24) और निर्वाचक रजिस्ट्रीकरण नियम, 1960 (नियम 13, 21A, 27)। राज्यवार तिथियों और विशिष्ट नोटिसों के लिए हमेशा राज्य CEO और ECI की आधिकारिक वेबसाइट देखें।">Legal authority: Representation of the People Act, 1950 (Sections 21, 22, 24) and Registration of Electors Rules, 1960 (Rules 13, 21A, 27). Always consult state CEO and ECI official notifications for state-specific schedules.</p>
 </section>
 
+<!-- ═══ RTI & PETITIONS ═══ -->
 <section id="rti">
-<h2>RTI and petitions</h2>
-<p class="sub">Asking questions in writing is a lawful, peaceful way to hold institutions to account.</p>
+<h2 data-h="RTI व नागरिक याचिकाएँ">RTI and petitions</h2>
+<p class="sub" data-h="लिखित सवाल पूछना संस्थाओं को जवाबदेह बनाने का एक कानूनी और शांतिपूर्ण तरीका है।">Asking questions in writing is a lawful, peaceful way to hold institutions to account.</p>
 <div class="cols">
-<div class="card do"><h3>Right to Information Act, 2005</h3><ul>
-<li>Any citizen can ask a public authority for records or information.</li>
-<li>Write to the authority's Public Information Officer (PIO). Central bodies can be reached online at rtionline.gov.in; states have their own portals or paper forms.</li>
-<li>A small fee applies, and families below the poverty line are exempt. The fee differs by state.</li>
-<li>A reply is due in 30 days, or 48 hours where life or liberty is at stake.</li>
-<li>If unsatisfied: first appeal to the First Appellate Authority within 30 days, then second appeal to the Information Commission within 90 days.</li></ul></div>
-<div class="card do"><h3>A sample RTI question</h3><ul>
-<li>"For my assembly constituency, please give the number of names added and deleted from the electoral roll between [date] and [date], with the notice or order under which deletions were made."</li>
-<li>Ask for documents and numbers, not opinions. Keep it short and specific.</li>
-<li>Some information may be refused under the Act's exemptions, such as personal data. You can appeal.</li></ul></div>
-<div class="card lim"><h3>Petitions and complaints</h3><ul>
-<li>Write to the Electoral Registration Officer, District Magistrate or Chief Electoral Officer. Keep a dated copy and proof of delivery.</li>
-<li>General grievances against central government bodies can be filed on CPGRAMS (pgportal.gov.in).</li>
-<li>You can also petition your MP or MLA, and approach the courts under Articles 32 and 226.</li></ul></div>
+<div class="card do"><h3 data-h="सूचना का अधिकार अधिनियम, 2005">Right to Information Act, 2005</h3><ul>
+<li data-h="कोई भी नागरिक किसी भी सार्वजनिक प्राधिकरण से रिकॉर्ड या जानकारी माँग सकता है।">Any citizen can ask a public authority for records or information.</li>
+<li data-h="प्राधिकरण के जन सूचना अधिकारी (PIO) को लिखें। केंद्रीय निकायों में ऑनलाइन rtionline.gov.in पर; राज्यों के अपने पोर्टल या कागज़ी फ़ॉर्म हैं।">Write to the authority's Public Information Officer (PIO). Central bodies can be reached online at rtionline.gov.in; states have their own portals or paper forms.</li>
+<li data-h="मामूली शुल्क लगता है; गरीबी रेखा से नीचे (BPL) परिवारों को छूट है। शुल्क राज्यों में भिन्न हो सकता है।">A small fee applies, and families below the poverty line are exempt. The fee differs by state.</li>
+<li data-h="30 दिनों के भीतर जवाब मिलता है, या जीवन व व्यक्तिगत स्वतंत्रता का मामला होने पर 48 घंटों में।">A reply is due in 30 days, or 48 hours where life or liberty is at stake.</li>
+<li data-h="असंतुष्ट होने पर: 30 दिनों में प्रथम अपीलीय प्राधिकारी को प्रथम अपील, फिर 90 दिनों में सूचना आयोग को द्वितीय अपील।">If unsatisfied: first appeal to the First Appellate Authority within 30 days, then second appeal to the Information Commission within 90 days.</li></ul></div>
+<div class="card do"><h3 data-h="एक नमूना RTI प्रश्न">A sample RTI question</h3><ul>
+<li data-h="&quot;मेरे विधानसभा क्षेत्र के लिए, कृपया [तारीख] और [तारीख] के बीच मतदाता सूची में जोड़े और हटाए गए नामों की संख्या, और उन आदेशों की प्रति दें जिनके तहत विलोपन किए गए।&quot;">"For my assembly constituency, please give the number of names added and deleted from the electoral roll between [date] and [date], with the notice or order under which deletions were made."</li>
+<li data-h="दस्तावेज़ और संख्या माँगें, राय नहीं। प्रश्न छोटा और स्पष्ट रखें।">Ask for documents and numbers, not opinions. Keep it short and specific.</li>
+<li data-h="व्यक्तिगत डेटा जैसी कुछ जानकारी छूट के तहत रोकी जा सकती है। आप अपील कर सकते हैं।">Some information may be refused under the Act's exemptions, such as personal data. You can appeal.</li></ul></div>
+<div class="card lim"><h3 data-h="याचिकाएँ और शिकायतें">Petitions and complaints</h3><ul>
+<li data-h="निर्वाचक रजिस्ट्रीकरण अधिकारी, डीएम या मुख्य निर्वाचन अधिकारी को लिखें। पावती और तारीख सुरक्षित रखें।">Write to the Electoral Registration Officer, District Magistrate or Chief Electoral Officer. Keep a dated copy and proof of delivery.</li>
+<li data-h="केंद्रीय सरकारी निकायों के खिलाफ सामान्य शिकायतें CPGRAMS (pgportal.gov.in) पर दर्ज की जा सकती हैं।">General grievances against central government bodies can be filed on CPGRAMS (pgportal.gov.in).</li>
+<li data-h="आप अपने सांसद या विधायक को भी याचिका दे सकते हैं, और अनुच्छेद 32 व 226 के तहत अदालत का रुख कर सकते हैं।">You can also petition your MP or MLA, and approach the courts under Articles 32 and 226.</li></ul></div>
 </div>
-<p class="note">Fees, portals and time limits change. Confirm on the official RTI portal or with legal aid.</p>
+<p class="note" data-h="शुल्क, पोर्टल और समय सीमा बदल सकते हैं। आधिकारिक RTI पोर्टल या कानूनी सहायता से पुष्टि करें।">Fees, portals and time limits change. Confirm on the official RTI portal or with legal aid.</p>
 </section>
 
 <section id="about">
@@ -360,11 +376,223 @@ var AB=[
 ["No names on the page","पेज पर कोई नाम नहीं","The creators choose not to publish their names, because the message matters more than the messenger. This keeps the focus on the Constitution, not on any individual.","रचनाकार अपने नाम प्रकाशित न करने का विकल्प चुनते हैं, क्योंकि संदेश, संदेशवाहक से ज़्यादा महत्वपूर्ण है। इससे ध्यान संविधान पर रहता है, किसी व्यक्ति पर नहीं।"]
 ];
 
+var SIR_SCENARIOS = [
+  {
+    id: "notice",
+    en_title: "1. I got an SIR notice",
+    hi_title: "1. मुझे SIR का नोटिस मिला है",
+    dest_en: "Official Destination: State CEO Portal & ERO Office",
+    dest_hi: "आधिकारिक गंतव्य: राज्य CEO पोर्टल व ERO कार्यालय",
+    url: "https://voters.eci.gov.in/",
+    steps_en: [
+      "Do not ignore: Note notice date, response deadline, officer designation, and reference number.",
+      "Photograph & copy: Take clear photos and make photocopies of every page of the notice.",
+      "Verify locally: Contact your Booth Level Officer (BLO) or call the 1950 voter helpline.",
+      "Submit written reply: Prepare a written response attaching identity and residence proofs within deadline.",
+      "Obtain signed receiving: Demand a physical stamped, signed, and dated acknowledgement."
+    ],
+    steps_hi: [
+      "अनदेखा न करें: नोटिस की तारीख, जवाब की अंतिम तिथि, अधिकारी का पदनाम और नोटिस क्रमांक तुरंत नोट करें।",
+      "फोटो और कॉपी लें: नोटिस के सभी पन्नों की साफ़ तस्वीर लें और सुरक्षित प्रतियाँ बनाएँ।",
+      "सत्यापन करें: अपने बीएलओ (BLO) से संपर्क करें या 1950 हेल्पलाइन पर कॉल कर पुष्टि करें।",
+      "लिखित जवाब दें: माँगे गए पहचान और निवास प्रमाणों के साथ निर्धारित समय में लिखित उत्तर प्रस्तुत करें।",
+      "पावती लें: अपनी प्रति पर मुहर, हस्ताक्षर और तारीख सहित आधिकारिक पावती (acknowledgement) अवश्य प्राप्त करें।"
+    ],
+    docs_en: [
+      "Proof of ordinary residence (Electricity/Water bill, Bank passbook, Gas connection, Registered rent deed).",
+      "Identity and age proof (Aadhaar, EPIC, PAN card, Driving licence, Passport).",
+      "Original copy of the notice received."
+    ],
+    docs_hi: [
+      "सामान्य निवास का प्रमाण (बिजली/पानी बिल, बैंक पासबुक, गैस कनेक्शन, रजिस्टर्ड किरायानामा)।",
+      "पहचान और आयु प्रमाण (आधार कार्ड, पुराना वोटर आईडी, पैन कार्ड, ड्राइविंग लाइसेंस, पासपोर्ट)।",
+      "प्राप्त हुए नोटिस की मूल प्रति।"
+    ],
+    esc_en: "If receipt is refused or arbitrary action is taken, submit a written representation to the District Magistrate (District Election Officer) and escalate to the State Chief Electoral Officer (CEO).",
+    esc_hi: "यदि पावती देने से मना किया जाए या मनमानी कार्रवाई हो, तो ज़िला मजिस्ट्रेट (DEO) को लिखित शिकायत दें और राज्य मुख्य निर्वाचन अधिकारी (CEO) को सूचित करें।"
+  },
+  {
+    id: "missing",
+    en_title: "2. My name is missing",
+    hi_title: "2. मेरा नाम सूची में नहीं है",
+    dest_en: "Official Destination: Form 6 on ECI Portal",
+    dest_hi: "आधिकारिक गंतव्य: चुनाव आयोग पोर्टल — फ़ॉर्म 6",
+    url: "https://voters.eci.gov.in/",
+    steps_en: [
+      "Search first: Check by EPIC number and by details on voters.eci.gov.in and your state CEO website.",
+      "Check age qualification: If you are 18+ or turning 18 before 1 Jan, 1 Apr, 1 Jul, or 1 Oct, apply.",
+      "Fill Form 6: Submit Form 6 online via voters.eci.gov.in or offline through your local BLO/ERO.",
+      "Save Reference Number: Keep the acknowledgement tracking ID to monitor verification status.",
+      "Facilitate BLO verification: Keep original age and residence documents ready for physical check."
+    ],
+    steps_hi: [
+      "पहले खोजें: voters.eci.gov.in और अपने राज्य के CEO पोर्टल पर EPIC नंबर और नाम से जाँचें।",
+      "अर्हता तिथि: यदि आपकी आयु 18+ है या 1 जनवरी, 1 अप्रैल, 1 जुलाई या 1 अक्टूबर को 18 के हो रहे हैं, तो आवेदन करें।",
+      "फ़ॉर्म 6 भरें: नए मतदाता पंजीकरण के लिए ऑनलाइन voters.eci.gov.in पर या बीएलओ के माध्यम से ऑफ़लाइन फ़ॉर्म 6 जमा करें।",
+      "रेफ़रेंस नंबर सुरक्षित रखें: पावती और ट्रैकिंग नंबर सहेजें जिससे आवेदन की स्थिति जाँची जा सके।",
+      "BLO भौतिक सत्यापन: बीएलओ के निरीक्षण के लिए अपने मूल आयु और निवास दस्तावेज़ तैयार रखें।"
+    ],
+    docs_en: [
+      "1 Passport-size colour photograph.",
+      "Age proof (Birth certificate, Aadhaar, PAN card, Driving Licence, or Class 10/12 certificate).",
+      "Ordinary residence proof (Utility bill, Bank passbook, Passport, or Registered lease deed)."
+    ],
+    docs_hi: [
+      "1 पासपोर्ट आकार का रंगीन फोटो।",
+      "आयु प्रमाण (जन्म प्रमाण पत्र, आधार, पैन कार्ड, ड्राइविंग लाइसेंस, या 10वीं/12वीं अंकपत्र)।",
+      "निवास प्रमाण (बिजली/पानी बिल, बैंक पासबुक, पासपोर्ट, या रजिस्टर्ड किरायानामा)।"
+    ],
+    esc_en: "Track your reference number on voters.eci.gov.in. If unaddressed beyond 30 days, contact the Electoral Registration Officer (ERO) or call 1950.",
+    esc_hi: "voters.eci.gov.in पर स्थिति ट्रैक करें। यदि 30 दिनों से अधिक समय तक लंबित रहे, तो ERO से संपर्क करें या 1950 पर कॉल करें।"
+  },
+  {
+    id: "dropped",
+    en_title: "3. Dropped from earlier roll",
+    hi_title: "3. पुरानी सूची से नाम हटा दिया",
+    dest_en: "Official Destination: ERO Office & CEO Deletion Lists",
+    dest_hi: "आधिकारिक गंतव्य: ERO कार्यालय व राज्य CEO विलोपन सूची",
+    url: "https://voters.eci.gov.in/",
+    steps_en: [
+      "Gather past evidence: Locate an old voter slip, previous electoral roll PDF page, or previous EPIC copy.",
+      "Inspect Deletion List: Check the published draft and final deletion list (Form 7 exclusions) on your State CEO portal.",
+      "Invoke statutory protection: Under Section 22 of the RP Act 1950 and Rule 21A, deletion requires reasonable opportunity of hearing.",
+      "Submit Form 6 with representation: File Form 6 for re-inclusion, attaching a letter detailing wrongful omission without notice.",
+      "Keep proof of delivery: Retain all stamped delivery receipts and tracking references."
+    ],
+    steps_hi: [
+      "पुराना रिकॉर्ड जुटाएँ: पुरानी मतदाता पर्ची, पिछली निर्वाचक नामावली का पेज या पुराने वोटर कार्ड की प्रति निकालें।",
+      "विलोपन सूची (Deletion List) देखें: राज्य के CEO पोर्टल पर ड्राफ़्ट और फाइनल विलोपन सूची (फ़ॉर्म 7) की जाँच करें।",
+      "कानूनी सुरक्षा का हवाला दें: RP Act 1950 की धारा 22 और नियम 21A के तहत बिना सुनवाई नाम हटाना गैरकानूनी है।",
+      "अभ्यावेदन के साथ फ़ॉर्म 6 जमा करें: बिना नोटिस गलत विलोपन का उल्लेख करते हुए पुनः फ़ॉर्म 6 और कवर लेटर जमा करें।",
+      "पावती सुरक्षित रखें: मुहर लगी पावती या डाक की रसीद संभाल कर रखें।"
+    ],
+    docs_en: [
+      "Copy of previous EPIC card.",
+      "Screenshot or printout of earlier roll entry (AC number, Part number, and Serial number).",
+      "Current ordinary residence proof and identity proof.",
+      "Formal representation letter addressed to the ERO/DEO."
+    ],
+    docs_hi: [
+      "पुराने वोटर आईडी कार्ड की प्रति।",
+      "पिछली नामावली का स्क्रीनशॉट या प्रिंट (विधानसभा, भाग संख्या और क्रम संख्या सहित)।",
+      "वर्तमान निवास प्रमाण और पहचान प्रमाण।",
+      "ERO/DEO के नाम औपचारिक अभ्यावेदन पत्र।"
+    ],
+    esc_en: "Submit representation to District Election Officer (DM). If rejected, appeal under Section 24 of RP Act, 1950. For arbitrary mass deletions, a writ petition lies under Article 226 in the High Court.",
+    esc_hi: "ज़िला निर्वाचन अधिकारी (डीएम) को अभ्यावेदन दें। अस्वीकृत होने पर धारा 24 के तहत अपील करें। मनमाने विलोपन पर हाईकोर्ट में अनुच्छेद 226 याचिका दायर की जा सकती है।"
+  },
+  {
+    id: "hearing",
+    en_title: "4. Called for a hearing",
+    hi_title: "4. सुनवाई के लिए बुलाया गया है",
+    dest_en: "Official Destination: Designated ERO / AERO Hearing Venue",
+    dest_hi: "आधिकारिक गंतव्य: निर्धारित ERO/AERO सुनवाई स्थल",
+    url: "https://voters.eci.gov.in/",
+    steps_en: [
+      "Check summons details: Verify exact date, time, venue, room number, and presiding officer.",
+      "Prepare duplicate dossiers: Make two complete self-attested photocopies of all requested proofs alongside originals.",
+      "Attend in person: Be present punctually. You may be accompanied by a family member or legal aid volunteer.",
+      "Submit written deposition: State clearly in writing that you are an ordinary resident and entitled to vote.",
+      "Demand attendance endorsement: Insist that the officer sign, stamp, and record the date on your duplicate copy."
+    ],
+    steps_hi: [
+      "समन विवरण जाँचें: सुनवाई की तारीख, समय, स्थान, कक्ष संख्या और पीठासीन अधिकारी की पुष्टि करें।",
+      "दोहरी फाइल तैयार करें: मूल दस्तावेज़ों के साथ सभी प्रतियों के दो स्व-हस्ताक्षरित सेट बनाएँ।",
+      "व्यक्तिगत रूप से उपस्थित हों: समय पर पहुँचें। परिजन या विधिक सहायता कार्यकर्ता को साथ ले जा सकते हैं।",
+      "लिखित बयान दें: स्पष्ट लिखित बयान दें कि आप क्षेत्र के सामान्य निवासी और मताधिकार के पात्र हैं।",
+      "उपस्थिति प्रमाण लें: अधिकारी से अपनी दूसरी प्रति पर उपस्थिति की मुहर, हस्ताक्षर और तारीख अवश्य दर्ज कराएँ।"
+    ],
+    docs_en: [
+      "Official hearing notice / summons letter.",
+      "Original Photo ID (Aadhaar, Passport, Driving Licence, PAN).",
+      "Original Residence Proof (Title deed, registered rent agreement, utility bills, passbook).",
+      "Roll entries of family members living at the same address (if enrolled)."
+    ],
+    docs_hi: [
+      "सुनवाई का नोटिस / समन पत्र।",
+      "मूल फोटो पहचान पत्र (आधार, पासपोर्ट, ड्राइविंग लाइसेंस, पैन)।",
+      "मूल निवास प्रमाण (मकान रजिस्ट्री, रजिस्टर्ड किरायानामा, बिल, पासबुक)।",
+      "उसी पते पर रहने वाले परिवार के अन्य सदस्यों के मतदाता विवरण।"
+    ],
+    esc_en: "If an adverse decision is indicated, demand a certified copy of the reasoned speaking order immediately. Appeal to the District Magistrate within 15 days under Rule 27 of Registration of Electors Rules, 1960.",
+    esc_hi: "यदि प्रतिकूल निर्णय हो, तो तत्काल सकारण आदेश (speaking order) की प्रमाणित प्रति माँगें। 15 दिनों में डीएम को नियम 27 के तहत अपील करें।"
+  },
+  {
+    id: "rejected",
+    en_title: "5. Application was rejected",
+    hi_title: "5. आवेदन अस्वीकार कर दिया गया",
+    dest_en: "Official Destination: Appellate Authority: District Magistrate (DEO)",
+    dest_hi: "आधिकारिक गंतव्य: अपीलीय प्राधिकारी: ज़िला मजिस्ट्रेट (DEO)",
+    url: "https://voters.eci.gov.in/",
+    steps_en: [
+      "Obtain written order: An oral refusal has no legal effect. Insist on the formal written speaking order with reasons.",
+      "Note 15-day deadline: First Appeal must be submitted to the District Magistrate / DEO within 15 calendar days.",
+      "Draft Appeal Memorandum: Clearly explain how submitted proofs satisfy statutory requirements.",
+      "Check nominal fees: Affix required state court fee stamps if specified by state rules.",
+      "Keep CEO Second Appeal ready: If DM rejects, a Second Appeal lies before the State Chief Electoral Officer (CEO)."
+    ],
+    steps_hi: [
+      "लिखित आदेश प्राप्त करें: केवल मौखिक मनाही का कोई कानूनी मूल्य नहीं है। लिखित सकारण आदेश की प्रति माँगें।",
+      "15 दिन की समय सीमा: आदेश की तारीख से 15 दिनों के भीतर ज़िला मजिस्ट्रेट (DEO) को प्रथम अपील दाखिल करें।",
+      "अपील का ज्ञापन तैयार करें: स्पष्ट रूप से लिखें कि आपके दस्तावेज़ कैसे वैध हैं और अस्वीकृति क्यों गलत है।",
+      "नाममात्र शुल्क: यदि राज्य के नियमों में आवश्यक हो तो निर्धारित कोर्ट फ़ीस स्टाम्प लगाएँ।",
+      "CEO के पास दूसरी अपील: यदि डीएम अपील खारिज करे, तो राज्य के मुख्य निर्वाचन अधिकारी (CEO) के पास दूसरी अपील का अधिकार है।"
+    ],
+    docs_en: [
+      "Certified copy of the ERO's rejection order.",
+      "Copy of original application (Form 6/7/8) and tracking receipt.",
+      "Supporting identity and residence proofs.",
+      "Grounds of Appeal memorandum."
+    ],
+    docs_hi: [
+      "ERO द्वारा जारी अस्वीकृति आदेश की प्रमाणित प्रति।",
+      "मूल आवेदन (फ़ॉर्म 6/7/8) की प्रति और ट्रैकिंग पावती।",
+      "समर्थक पहचान और निवास प्रमाण पत्र।",
+      "अपील के आधारों का ज्ञापन।"
+    ],
+    esc_en: "First Appeal to DM (within 15 days) → Second Appeal to State CEO (within 30 days) → Writ Petition under Article 226 in the High Court.",
+    esc_hi: "डीएम को प्रथम अपील (15 दिन) → मुख्य निर्वाचन अधिकारी (CEO) को द्वितीय अपील (30 दिन) → उच्च न्यायालय में अनुच्छेद 226 रिट याचिका।"
+  },
+  {
+    id: "correction",
+    en_title: "6. Correct details or shifting",
+    hi_title: "6. विवरण सुधारना या पता बदलना",
+    dest_en: "Official Destination: Form 8 on ECI Portal",
+    dest_hi: "आधिकारिक गंतव्य: चुनाव आयोग पोर्टल — फ़ॉर्म 8",
+    url: "https://voters.eci.gov.in/",
+    steps_en: [
+      "Select Form 8: Open Form 8 on voters.eci.gov.in for existing electors.",
+      "Pick your request: Choose from Shifting of residence, Correction of entries, Replacement EPIC, or Marking of PwD.",
+      "Upload matching proof: Ensure uploaded proof contains exact correct spelling or new residence address.",
+      "Save Reference Number: Keep the acknowledgement tracking ID to monitor verification.",
+      "Present original to BLO: Keep original documents accessible when the BLO visits for verification."
+    ],
+    steps_hi: [
+      "फ़ॉर्म 8 चुनें: मौजूदा मतदाताओं के लिए voters.eci.gov.in पर फ़ॉर्म 8 खोलें।",
+      "उचित विकल्प चुनें: निवास स्थानांतरण, प्रविष्टि सुधार, नया वोटर आईडी (बिना सुधार), या दिव्यांगता चिन्हांकन में से चुनें।",
+      "दस्तावेज़ अपलोड करें: सुनिश्चित करें कि अपलोड किए गए प्रमाण में सही नाम या नया पता स्पष्ट दर्ज हो।",
+      "रेफ़रेंस नंबर रखें: आवेदन की स्थिति देखने के लिए पावती क्रमांक सहेज कर रखें।",
+      "BLO को मूल प्रमाण दिखाएँ: बीएलओ के सत्यापन के समय मूल दस्तावेज़ प्रस्तुत करें।"
+    ],
+    docs_en: [
+      "For Name/Age/Relation/Photo: Aadhaar card, PAN card, Birth Certificate, or Class 10 Certificate.",
+      "For Address Shifting: Electricity/Water bill, Bank Passbook, Passport, or Registered lease deed.",
+      "For Replacement EPIC: Copy of old damaged card or FIR/Police report if lost."
+    ],
+    docs_hi: [
+      "नाम/आयु/संबंधी/फोटो सुधार: आधार कार्ड, पैन, जन्म प्रमाण पत्र, या 10वीं अंकपत्र।",
+      "पता स्थानांतरण: बिजली/पानी बिल, बैंक पासबुक, पासपोर्ट, या रजिस्टर्ड किरायानामा।",
+      "वोटर आईडी बदलने पर: पुराने क्षतिग्रस्त कार्ड की प्रति या खो जाने पर पुलिस रिपोर्ट।"
+    ],
+    esc_en: "If corrections are delayed beyond 30 days, register a grievance on voters.eci.gov.in or contact the District Voter Helpline at 1950.",
+    esc_hi: "यदि 30 दिनों के भीतर सुधार न हो, तो पोर्टल पर शिकायत दर्ज करें या 1950 वोटर हेल्पलाइन पर संपर्क करें।"
+  }
+];
 
 /* ═══════════════════════════════════════════
    RENDERING
    ═══════════════════════════════════════════ */
-var lang="en",flt="all";
+var lang="en",flt="all",curSir="notice";
 var els=[].slice.call(document.querySelectorAll("[data-h]"));
 els.forEach(function(e){e.dataset.e=e.innerHTML});
 
@@ -406,6 +634,37 @@ function render(){
     return '<div class="card do"><h3>'+E(v[ti])+'</h3><p>'+E(v[ti+2])+'</p></div>';
   }).join("");
 
+  /* ── SIR Action Centre ── */
+  var sirTabs=document.getElementById("sir-tabs");
+  var sirContent=document.getElementById("sir-content");
+  if(sirTabs && sirContent){
+    sirTabs.innerHTML=SIR_SCENARIOS.map(function(sc){
+      return '<button data-sir="'+sc.id+'" aria-pressed="'+(curSir===sc.id)+'">'+(lang==="hi"?sc.hi_title:sc.en_title)+'</button>';
+    }).join("");
+
+    var sc=SIR_SCENARIOS.filter(function(s){return s.id===curSir})[0]||SIR_SCENARIOS[0];
+    var title=lang==="hi"?sc.hi_title:sc.en_title;
+    var dest=lang==="hi"?sc.dest_hi:sc.dest_en;
+    var steps=lang==="hi"?sc.steps_hi:sc.steps_en;
+    var docs=lang==="hi"?sc.docs_hi:sc.docs_en;
+    var esc=lang==="hi"?sc.esc_hi:sc.esc_en;
+
+    sirContent.innerHTML='<div class="sir-action-card">' +
+      '<h3>'+E(title)+'</h3>' +
+      '<div class="sir-dest"><b>'+(lang==="hi"?"गंतव्य: ":"Destination: ")+'</b><a href="'+sc.url+'" target="_blank" rel="noopener">'+E(dest)+' ↗</a></div>' +
+      '<div class="sir-grid">' +
+        '<div class="sir-subbox"><h4>'+(lang==="hi"?"ज़रूरी कदम (Next Steps)":"Required Next Steps")+'</h4><ol>'+steps.map(function(s){return '<li>'+E(s)+'</li>'}).join("")+'</ol></div>' +
+        '<div class="sir-subbox"><h4>'+(lang==="hi"?"निर्धारित दस्तावेज़ (Specified Documents)":"Specified Documents")+'</h4><ul>'+docs.map(function(d){return '<li>'+E(d)+'</li>'}).join("")+'</ul></div>' +
+      '</div>' +
+      '<div class="sir-escalate"><b>'+(lang==="hi"?"अपील व समाधान का रास्ता (Escalation Route):":"Escalation Route:")+'</b>'+E(esc)+'</div>' +
+    '</div>';
+
+    sirTabs.onclick=function(ev){
+      var sid=ev.target.dataset&&ev.target.dataset.sir;
+      if(sid){curSir=sid;render();}
+    };
+  }
+
   /* ── About ── */
   document.getElementById("about-cards").innerHTML=AB.map(function(a){
     var ti=lang==="hi"?1:0;
@@ -434,10 +693,6 @@ render();
 </style>
 <script>
 (function(){
-  var nav=document.querySelector(".top nav");
-  if(nav){[["#notice","Notice?"],["#rti","RTI"]].forEach(function(l){
-    var a=document.createElement("a");a.href=l[0];a.textContent=l[1];nav.appendChild(a);});}
-
   var cl=document.getElementById("cases-list");
   function addLinks(){
     if(!cl)return;
