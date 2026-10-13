@@ -73,7 +73,9 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 44px;font
 .sir-subbox li{margin-bottom:6px}
 .sir-escalate{margin-top:14px;padding:12px 14px;border-left:4px solid var(--saf);background:var(--bg);font-size:.95rem}
 .sir-escalate b{color:var(--ink);display:block;margin-bottom:4px}
-@media print{.wrap>*:not(#detain){display:none!important}body{background:#fff;color:#000}.btn,.noprint{display:none!important}}
+.case-meta{margin:4px 0 6px}.case-meta .art{font-size:.85rem;padding:2px 8px}
+.jlink{display:inline-block;margin-top:4px;font-size:.9rem;color:var(--link);font-weight:600}
+@media print{.wrap>*:not(#detain){display:none!important}body{background:#fff;color:#000}.btn,.noprint{display:none!important}#detain::after{content:"Educational information, not legal advice. Verify with a lawyer or a legal aid authority.";display:block;font-size:12px;margin-top:14px}}
 </style>
 </head>
 <body>
@@ -151,7 +153,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 44px;font
 </div>
 
 <div class="hero">
-  <p class="slogan">इंकलाब ज़िंदाबाद</p>
+  <p class="slogan" lang="hi">इंकलाब ज़िंदाबाद</p>
   <h1 data-h="संविधान जानें। शांति से विरोध करें।">Know your Constitution. Protest peacefully.</h1>
   <p data-h="भारत के नागरिकों के लिए: आपके मौलिक अधिकार, शांतिपूर्ण प्रदर्शन के नियम और हिरासत में क्या करें, सरल भाषा में।">Inquilab Zindabad means long live the revolution, and ours is a constitutional one. Here are your fundamental rights, the rules of peaceful protest, and what to do if you are stopped or detained, in plain language.</p>
   <a class="btn" href="#rights" data-h="मेरे अधिकार देखें">See my rights</a>
@@ -256,8 +258,8 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 44px;font
 <footer>
   <span data-h="शैक्षिक जानकारी, कानूनी सलाह नहीं। कानून और प्रक्रियाएँ बदलती रहती हैं, इसलिए वकील या कानूनी-सहायता प्राधिकरण से पुष्टि करें।">Educational information, not legal advice. Laws and procedures change, so confirm with a lawyer or legal-aid authority.</span>
   <span data-h="संविधान का पूरा पाठ यहाँ पढ़ें:">Read the full text of the Constitution at</span> <a href="https://legislative.gov.in/constitution-of-india/" target="_blank" rel="noopener">legislative.gov.in</a>.
-  <span data-h="स्वतंत्र नागरिक पहल, किसी राजनीतिक दल से संबद्ध नहीं, कोई व्यक्तिगत डेटा एकत्र नहीं करती।">Independent citizen initiative, not affiliated with any political party, and it collects no personal data.</span>
-  <br><span class="reviewed" data-h="पिछली समीक्षा: अक्टूबर 2026">Last reviewed: October 2026</span>
+  <span data-h="स्वतंत्र नागरिक संदर्भ — यह साइट ब्राउज़र में सीधे चलती है और कोई व्यक्तिगत डेटा एकत्र नहीं करती (होस्टिंग सर्वर लॉग्स सेवा प्रदाता के मानक नियमों के अधीन हैं)।">Independent civic reference — runs entirely client-side and collects zero personal data (hosting server logs are governed by standard provider infrastructure policies).</span>
+  <br><span class="reviewed" data-h="पिछली समीक्षा: अक्टूबर 2026 (विस्तृत ऑडिट चेकलिस्ट LAWYER_REVIEW.md में उपलब्ध)">Last reviewed: October 2026 (Audit checklist published in LAWYER_REVIEW.md)</span>
 </footer>
 </div>
 
@@ -287,7 +289,14 @@ var S=[
 ["Note officers' names, badge and vehicle numbers, plus the time and place.","अधिकारियों के नाम, बैज और गाड़ी नंबर, समय और जगह नोट करें।"],
 ["If you are injured, ask for a medical examination and keep the record.","चोट लगी हो तो मेडिकल जाँच माँगें और रिकॉर्ड रखें।"],
 ["You must be produced before a magistrate within 24 hours. If not, a habeas corpus petition can be filed.","24 घंटे के भीतर मजिस्ट्रेट के सामने पेश करना ज़रूरी है। नहीं हुआ तो बंदी प्रत्यक्षीकरण याचिका दायर हो सकती है।"],
-["Under the BNSS, a woman generally must not be arrested between sunset and sunrise. The law allows an exception in exceptional circumstances, subject to the prescribed written report and prior permission of a Judicial Magistrate First Class. Confirm the applicable procedure with a lawyer.","BNSS के तहत सामान्यतः किसी महिला को सूर्यास्त और सूर्योदय के बीच गिरफ़्तार नहीं किया जाना चाहिए। असाधारण परिस्थितियों में कानून अपवाद की अनुमति देता है, जिसके लिए निर्धारित लिखित रिपोर्ट और प्रथम श्रेणी न्यायिक मजिस्ट्रेट की पूर्व अनुमति आवश्यक है। लागू प्रक्रिया की पुष्टि वकील से करें।"]
+[
+  "Under the BNSS, a woman generally must not be arrested between sunset and sunrise. " +
+  "The law allows an exception in exceptional circumstances, subject to the prescribed written report and prior permission of a Judicial Magistrate First Class. " +
+  "Confirm the applicable procedure with a lawyer.",
+  "BNSS के तहत सामान्यतः किसी महिला को सूर्यास्त और सूर्योदय के बीच गिरफ़्तार नहीं किया जाना चाहिए। " +
+  "असाधारण परिस्थितियों में कानून अपवाद की अनुमति देता है, जिसके लिए निर्धारित लिखित रिपोर्ट और प्रथम श्रेणी न्यायिक मजिस्ट्रेट की पूर्व अनुमति आवश्यक है। " +
+  "लागू प्रक्रिया की पुष्टि वकील से करें।"
+]
 ];
 
 var C=[["all","All","सभी"],["p","Protest","विरोध"],["a","Arrest and police","गिरफ़्तारी"],["v","Voting","मतदान"],["s","Speech","अभिव्यक्ति"],["c","Courts","अदालत"]];
@@ -333,15 +342,15 @@ var P=[
 ],"lim"]
 ];
 
-/* Supreme Court cases: [name, en_desc, hi_desc] */
+/* Supreme Court cases: [name, citation, en_desc, hi_desc, url] */
 var CASES=[
-["Himmat Lal K. Shah v. Commissioner of Police (1973)","Rules on public meetings cannot give officials unchecked power to refuse permission.","सार्वजनिक सभाओं पर बने नियम अधिकारियों को अनुमति मनमाने ढंग से अस्वीकार करने की अनियंत्रित शक्ति नहीं दे सकते।"],
-["D.K. Basu v. State of West Bengal (1997)","Sets arrest and custody safeguards: arrest memo, informing a relative, medical checks, access to a lawyer.","गिरफ़्तारी और हिरासत में सुरक्षा उपाय तय करता है: गिरफ़्तारी मेमो, रिश्तेदार को सूचना, मेडिकल जाँच, वकील से मिलने का अधिकार।"],
-["In re Ramlila Maidan Incident (2012)","Peaceful assembly and protest are fundamental rights; the Court criticised the midnight police action on sleeping protesters.","शांतिपूर्ण सभा और विरोध मौलिक अधिकार हैं; कोर्ट ने सोए हुए प्रदर्शनकारियों पर आधी रात की पुलिस कार्रवाई की आलोचना की।"],
-["Shreya Singhal v. Union of India (2015)","Only speech that amounts to incitement can be punished, not mere discussion or advocacy.","केवल उकसाने वाली बात दंडनीय है, सामान्य चर्चा या पक्ष रखना नहीं।"],
-["Mazdoor Kisan Shakti Sangathan v. Union of India (2018)","A blanket ban on protests at Jantar Mantar was struck down; authorities must balance protest with residents' rights.","जंतर-मंतर पर विरोध पर पूर्ण प्रतिबंध रद्द किया गया; अधिकारियों को विरोध और निवासियों के अधिकारों में संतुलन बनाना चाहिए।"],
-["Anuradha Bhasin v. Union of India (2020)","Section 144 orders and internet shutdowns must be necessary, proportionate, published and open to judicial review.","धारा 144 के आदेश और इंटरनेट बंदी आवश्यक, आनुपातिक, प्रकाशित और न्यायिक समीक्षा के लिए खुले होने चाहिए।"],
-["Amit Sahni v. Commissioner of Police (2020)","Public ways cannot be occupied indefinitely for protest.","सार्वजनिक मार्गों पर विरोध प्रदर्शन अनिश्चितकाल तक नहीं किया जा सकता।"]
+["Himmat Lal K. Shah v. Commissioner of Police (1973)","1973 AIR 87 / (1973) 1 SCC 227","Rules on public meetings cannot give officials unchecked power to refuse permission.","सार्वजनिक सभाओं पर बने नियम अधिकारियों को अनुमति मनमाने ढंग से अस्वीकार करने की अनियंत्रित शक्ति नहीं दे सकते।","https://indiankanoon.org/doc/1569255/"],
+["D.K. Basu v. State of West Bengal (1997)","(1997) 1 SCC 416 / AIR 1997 SC 610","Sets arrest and custody safeguards: arrest memo, informing a relative, medical checks, access to a lawyer.","गिरफ़्तारी और हिरासत में सुरक्षा उपाय तय करता है: गिरफ़्तारी मेमो, रिश्तेदार को सूचना, मेडिकल जाँच, वकील से मिलने का अधिकार।","https://indiankanoon.org/doc/501198/"],
+["In re Ramlila Maidan Incident (2012)","(2012) 5 SCC 1","Peaceful assembly and protest are fundamental rights; the Court criticised the midnight police action on sleeping protesters.","शांतिपूर्ण सभा और विरोध मौलिक अधिकार हैं; कोर्ट ने सोए हुए प्रदर्शनकारियों पर आधी रात की पुलिस कार्रवाई की आलोचना की।","https://indiankanoon.org/doc/1102604/"],
+["Shreya Singhal v. Union of India (2015)","(2015) 5 SCC 1 / AIR 2015 SC 1523","Only speech that amounts to incitement can be punished, not mere discussion or advocacy.","केवल उकसाने वाली बात दंडनीय है, सामान्य चर्चा या पक्ष रखना नहीं।","https://indiankanoon.org/doc/110813550/"],
+["Mazdoor Kisan Shakti Sangathan v. Union of India (2018)","(2018) 17 SCC 324","A blanket ban on protests at Jantar Mantar was struck down; authorities must balance protest with residents' rights.","जंतर-मंतर पर विरोध पर पूर्ण प्रतिबंध रद्द किया गया; अधिकारियों को विरोध और निवासियों के अधिकारों में संतुलन बनाना चाहिए।","https://indiankanoon.org/doc/192271811/"],
+["Anuradha Bhasin v. Union of India (2020)","(2020) 3 SCC 637","Section 144 orders and internet shutdowns must be necessary, proportionate, published and open to judicial review.","धारा 144 के आदेश और इंटरनेट बंदी आवश्यक, आनुपातिक, प्रकाशित और न्यायिक समीक्षा के लिए खुले होने चाहिए।","https://indiankanoon.org/doc/135246830/"],
+["Amit Sahni v. Commissioner of Police (2020)","(2020) 10 SCC 439 (Shaheen Bagh)","Public ways cannot be occupied indefinitely for protest.","सार्वजनिक मार्गों पर विरोध प्रदर्शन अनिश्चितकाल तक नहीं किया जा सकता।","https://indiankanoon.org/doc/106368383/"]
 ];
 
 /* Voter-roll check steps: [en, hi] */
@@ -354,9 +363,28 @@ var VC=[
 
 /* Form 6 steps: [en, hi] */
 var VF=[
-["<b>Who can apply</b> Any Indian citizen who turns 18 on or before a qualifying date and is ordinarily resident at the address. The ECI now has four qualifying dates each year (1 January, 1 April, 1 July, 1 October), and you can apply in advance from age 17. Check the ECI site for current rules.","<b>कौन आवेदन कर सकता है</b> कोई भी भारतीय नागरिक जो किसी अर्हता तिथि तक 18 वर्ष का हो जाए और उस पते पर सामान्यतः निवास करता हो। ECI की अब साल में चार अर्हता तिथियाँ हैं (1 जनवरी, 1 अप्रैल, 1 जुलाई, 1 अक्टूबर) और 17 वर्ष की आयु से अग्रिम आवेदन किया जा सकता है। वर्तमान नियम ECI साइट पर देखें।"],
-["<b>Online</b> Go to <a href='https://voters.eci.gov.in/' target='_blank' rel='noopener'>voters.eci.gov.in</a> → New Registration (Form 6). Upload a passport-size photo, age proof as listed on the current Form 6 (birth certificate, Aadhaar, Class-10 marksheet, passport) and address proof (ration card, utility bill, bank passbook, rent agreement).","<b>ऑनलाइन</b> <a href='https://voters.eci.gov.in/' target='_blank' rel='noopener'>voters.eci.gov.in</a> → New Registration (फ़ॉर्म 6)। पासपोर्ट-साइज़ फ़ोटो, आयु प्रमाण (वर्तमान फ़ॉर्म 6 में बताए अनुसार; जैसे जन्म प्रमाण पत्र, आधार, 10वीं मार्कशीट, पासपोर्ट) और पता प्रमाण (राशन कार्ड, बिजली बिल, बैंक पासबुक, किराया अनुबंध) अपलोड करें।"],
-["<b>Offline</b> Download Form 6 from the ECI site, fill it, attach a recent passport-size photo and copies of the documents listed on the current form, and submit it to the Electoral Registration Officer (ERO) of your constituency or your nearest BLO (Booth Level Officer).","<b>ऑफ़लाइन</b> ECI वेबसाइट से फ़ॉर्म 6 डाउनलोड करें, भरें, हाल की पासपोर्ट-साइज़ फ़ोटो और वर्तमान फ़ॉर्म में बताए दस्तावेज़ों की प्रतियाँ लगाएँ, और अपने निर्वाचन क्षेत्र के ERO या नज़दीकी BLO (बूथ लेवल ऑफ़िसर) को जमा करें।"],
+[
+  "<b>Who can apply</b> Any Indian citizen who turns 18 on or before a qualifying date and is ordinarily resident at the address. " +
+  "The ECI now has four qualifying dates each year (1 January, 1 April, 1 July, 1 October), and you can apply in advance from age 17. " +
+  "Check the ECI site for current rules.",
+  "<b>कौन आवेदन कर सकता है</b> कोई भी भारतीय नागरिक जो किसी अर्हता तिथि तक 18 वर्ष का हो जाए और उस पते पर सामान्यतः निवास करता हो। " +
+  "ECI की अब साल में चार अर्हता तिथियाँ हैं (1 जनवरी, 1 अप्रैल, 1 जुलाई, 1 अक्टूबर) और 17 वर्ष की आयु से अग्रिम आवेदन किया जा सकता है। " +
+  "वर्तमान नियम ECI साइट पर देखें।"
+],
+[
+  "<b>Online</b> Go to <a href='https://voters.eci.gov.in/' target='_blank' rel='noopener'>voters.eci.gov.in</a> → New Registration (Form 6). " +
+  "Upload a passport-size photo, age proof as listed on the current Form 6 (birth certificate, Aadhaar, Class-10 marksheet, passport) " +
+  "and address proof (ration card, utility bill, bank passbook, rent agreement).",
+  "<b>ऑनलाइन</b> <a href='https://voters.eci.gov.in/' target='_blank' rel='noopener'>voters.eci.gov.in</a> → New Registration (फ़ॉर्म 6)। " +
+  "पासपोर्ट-साइज़ फ़ोटो, आयु प्रमाण (वर्तमान फ़ॉर्म 6 में बताए अनुसार; जैसे जन्म प्रमाण पत्र, आधार, 10वीं मार्कशीट, पासपोर्ट) " +
+  "और पता प्रमाण (राशन कार्ड, बिजली बिल, बैंक पासबुक, किराया अनुबंध) अपलोड करें।"
+],
+[
+  "<b>Offline</b> Download Form 6 from the ECI site, fill it, attach a recent passport-size photo and copies of the documents listed on the current form, " +
+  "and submit it to the Electoral Registration Officer (ERO) of your constituency or your nearest BLO (Booth Level Officer).",
+  "<b>ऑफ़लाइन</b> ECI वेबसाइट से फ़ॉर्म 6 डाउनलोड करें, भरें, हाल की पासपोर्ट-साइज़ फ़ोटो और वर्तमान फ़ॉर्म में बताए दस्तावेज़ों की प्रतियाँ लगाएँ, " +
+  "और अपने निर्वाचन क्षेत्र के ERO या नज़दीकी BLO (बूथ लेवल ऑफ़िसर) को जमा करें।"
+],
 ["<b>Track your application</b> Note the reference number. Track status on the portal or call 1950. The BLO will visit your address for verification.","<b>आवेदन ट्रैक करें</b> संदर्भ संख्या नोट करें। पोर्टल पर या 1950 पर कॉल करके स्थिति जानें। BLO सत्यापन के लिए आपके पते पर आएगा।"],
 ["<b>Receive your EPIC</b> Once approved, you'll receive your Electoral Photo ID Card (EPIC). You can also download the e-EPIC from the portal.","<b>EPIC प्राप्त करें</b> स्वीकृति के बाद मतदाता फ़ोटो पहचान पत्र (EPIC) मिलेगा। आप e-EPIC भी पोर्टल से डाउनलोड कर सकते हैं।"]
 ];
@@ -364,8 +392,25 @@ var VF=[
 /* Voter tips: [en_title, hi_title, en_text, hi_text] */
 var VT=[
 ["It's free","यह मुफ़्त है","Registration and the voter ID are completely free. No agent or tout can charge you for it.","रजिस्ट्रेशन और मतदाता पहचान पत्र पूरी तरह मुफ़्त है। कोई दलाल या एजेंट इसके लिए पैसे नहीं ले सकता।"],
-["EPIC isn't the only accepted ID","वोट के लिए सिर्फ़ EPIC ही मान्य नहीं","You must be on the electoral roll. If you don't have your EPIC, you can show another photo ID approved by the ECI, such as Aadhaar, passport, driving licence, PAN card or MGNREGA job card. Check the full, current list on the ECI site.","आपका नाम मतदाता सूची में होना ज़रूरी है। EPIC न हो तो आप ECI द्वारा मान्य कोई अन्य फ़ोटो पहचान पत्र दिखा सकते हैं, जैसे आधार, पासपोर्ट, ड्राइविंग लाइसेंस, पैन कार्ड या मनरेगा जॉब कार्ड। पूरी और नवीनतम सूची ECI साइट पर देखें।"],
-["What SIR means","SIR का मतलब","SIR stands for Special Intensive Revision, a more intensive exercise than the routine yearly revision of the rolls. Its schedule and phases differ by state, so check your state's notices on the official ECI site. If your name is missing or wrong, apply with Form 6 or correct it with Form 8, keep your reference number, and note your state's deadline for claims and objections.","SIR का पूरा नाम Special Intensive Revision (विशेष गहन पुनरीक्षण) है, जो मतदाता सूची के नियमित वार्षिक पुनरीक्षण से अधिक गहन प्रक्रिया है। इसका कार्यक्रम राज्य के अनुसार अलग होता है, इसलिए ECI की आधिकारिक साइट पर अपने राज्य की सूचनाएँ देखें। नाम न हो या गलत हो तो फ़ॉर्म 6 से आवेदन करें या फ़ॉर्म 8 से सुधार कराएँ, संदर्भ संख्या रखें और अपने राज्य में दावे-आपत्ति की अंतिम तिथि नोट करें।"]
+[
+  "EPIC isn't the only accepted ID",
+  "वोट के लिए सिर्फ़ EPIC ही मान्य नहीं",
+  "You must be on the electoral roll. If you don't have your EPIC, you can show another photo ID approved by the ECI, " +
+  "such as Aadhaar, passport, driving licence, PAN card or MGNREGA job card. Check the full, current list on the ECI site.",
+  "आपका नाम मतदाता सूची में होना ज़रूरी है। EPIC न हो तो आप ECI द्वारा मान्य कोई अन्य फ़ोटो पहचान पत्र दिखा सकते हैं, " +
+  "जैसे आधार, पासपोर्ट, ड्राइविंग लाइसेंस, पैन कार्ड या मनरेगा जॉब कार्ड। पूरी और नवीनतम सूची ECI साइट पर देखें।"
+],
+[
+  "What SIR means",
+  "SIR का मतलब",
+  "SIR stands for Special Intensive Revision, a more intensive exercise than the routine yearly revision of the rolls. " +
+  "Its schedule and phases differ by state, so check your state's notices on the official ECI site. " +
+  "If your name is missing or wrong, apply with Form 6 or correct it with Form 8, keep your reference number, " +
+  "and note your state's deadline for claims and objections.",
+  "SIR का पूरा नाम Special Intensive Revision (विशेष गहन पुनरीक्षण) है, जो मतदाता सूची के नियमित वार्षिक पुनरीक्षण से अधिक गहन प्रक्रिया है। " +
+  "इसका कार्यक्रम राज्य के अनुसार अलग होता है, इसलिए ECI की आधिकारिक साइट पर अपने राज्य की सूचनाएँ देखें। " +
+  "नाम न हो या गलत हो तो फ़ॉर्म 6 से आवेदन करें या फ़ॉर्म 8 से सुधार कराएँ, संदर्भ संख्या रखें और अपने राज्य में दावे-आपत्ति की अंतिम तिथि नोट करें।"
+]
 ];
 
 /* About cards: [en_title, hi_title, en_text, hi_text] */
@@ -619,7 +664,12 @@ function render(){
 
   /* ── Cases ── */
   document.getElementById("cases-list").innerHTML=CASES.map(function(c){
-    return '<div class="case"><b>'+E(c[0])+'</b>'+(lang==="hi"?E(c[2]):E(c[1]))+'</div>';
+    return '<div class="case">' +
+      '<b>'+E(c[0])+'</b>' +
+      '<div class="case-meta"><span class="art">'+E(c[1])+'</span></div>' +
+      '<p>'+(lang==="hi"?E(c[3]):E(c[2]))+'</p>' +
+      '<a class="jlink" href="'+c[4]+'" target="_blank" rel="noopener">'+(lang==="hi"?"फैसले का दस्तावेज़ देखें (Indian Kanoon) ↗":"Read judgment transcript (Indian Kanoon) ↗")+'</a>' +
+    '</div>';
   }).join("");
 
   /* ── Voter check ── */
@@ -686,27 +736,5 @@ document.getElementById("en").onclick=function(){setLang("en")};
 document.getElementById("hi").onclick=function(){setLang("hi")};
 render();
 </script>
-
-<style>
-.jlink{display:inline-block;margin-top:4px;font-size:.9rem}
-@media print{#detain::after{content:"Educational information, not legal advice. Verify with a lawyer or a legal aid authority.";display:block;font-size:12px;margin-top:14px}}
-</style>
-<script>
-(function(){
-  var cl=document.getElementById("cases-list");
-  function addLinks(){
-    if(!cl)return;
-    [].slice.call(cl.querySelectorAll(".case")).forEach(function(c){
-      if(c.querySelector(".jlink"))return;
-      var name=c.querySelector("b");if(!name)return;
-      var a=document.createElement("a");a.className="jlink";a.target="_blank";a.rel="noopener";
-      a.href="https://indiankanoon.org/search/?formInput="+encodeURIComponent(name.textContent);
-      a.textContent="Find the judgment (unofficial search, verify at sci.gov.in)";
-      c.appendChild(document.createElement("br"));c.appendChild(a);});
-  }
-  if(cl){addLinks();new MutationObserver(addLinks).observe(cl,{childList:true});}
-})();
-</script>
-
 </body>
 </html>
