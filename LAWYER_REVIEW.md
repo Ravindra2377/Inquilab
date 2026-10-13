@@ -2,7 +2,7 @@
 
 Please check each item against current law and official sources, and mark it OK, CHANGE or REMOVE.
 Page: `index.html`. Hindi text is in the same file and also needs a native-speaker review.
-New sections (notice and hearing, RTI, quiz) are English only, pending your sign-off, so they are translated only once.
+New sections (notice and hearing, RTI) are English only, pending your sign-off, so they are translated only once.
 
 ## A. Constitution
 1. Art. 19(1)(a), (b), (c) wording and plain-language summaries.
