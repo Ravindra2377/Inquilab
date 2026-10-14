@@ -123,9 +123,9 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 44px;font
       <ul>
         <li><b>Got an SIR notice:</b> Note the deadline and officer details, take photos, submit a written reply with address/age proof, and demand a signed/stamped acknowledgement.</li>
         <li><b>Unenrolled or first-time voter missing:</b> Search on voters.eci.gov.in. If unregistered or turning 18, apply online or offline via Form 6.</li>
-        <li><b>Existing voter omitted during revision:</b> Distinguish pre-final publication (Rule 21A opportunity to show cause; Rule 23 appeal) from post-publication remedies (Section 22/23 RP Act; Section 24 / Rule 27 appeal). Do not create duplicate records.</li>
-        <li><b>Called for a hearing:</b> Attend with duplicate dossiers and original proofs; request attendance endorsement.</li>
-        <li><b>Application or claim rejected:</b> Request the formal written order with reasons. First appeal lies to District Magistrate within 15 days under Rule 27 (post-publication) or Rule 23 (pre-publication revision).</li>
+        <li><b>Existing voter omitted during revision:</b> Distinguish pre-final publication (Rule 21A opportunity to show cause; Rule 23 appeal) from post-publication remedies (Sections 22/23 RP Act; appeal under Section 24, with procedure in Rule 27). Do not create duplicate records.</li>
+        <li><b>Called for a hearing:</b> Attend with your original documents and a full set of copies; ask for a written acknowledgement of your attendance.</li>
+        <li><b>Application or claim rejected:</b> Request the formal written order with reasons. You can appeal. The first appeal goes to the District Election Officer (usually the Collector), or to the Appellate Officer before final publication. Time limits are short, so check the deadline on your order or notice.</li>
         <li><b>Correct details or shifting:</b> Submit Form 8 on the voter portal.</li>
       </ul>
 
@@ -220,7 +220,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 44px;font
   <h2 data-h="SIR व मतदाता एक्शन सेंटर">SIR & Voter Action Centre</h2>
   <p class="sub" data-h="अपनी स्थिति चुनें — आधिकारिक पोर्टल, ज़रूरी दस्तावेज़ और अपील का सटीक रास्ता जानें:">Choose your situation — find the official portal, required documents, and exact escalation route:</p>
 
-  <div class="chips" id="sir-tabs" role="tablist" aria-label="SIR Scenarios"></div>
+  <div class="chips" id="sir-tabs" role="group" aria-label="SIR Scenarios"></div>
   <div id="sir-content"></div>
 
   <p class="note" data-h="कानूनी आधार: जनप्रतिनिधित्व अधिनियम, 1950 (धारा 21, 22, 24) और निर्वाचक रजिस्ट्रीकरण नियम, 1960 (नियम 13, 21A, 27)। राज्यवार तिथियों और विशिष्ट नोटिसों के लिए हमेशा राज्य CEO और ECI की आधिकारिक वेबसाइट देखें।">Legal authority: Representation of the People Act, 1950 (Sections 21, 22, 24) and Registration of Electors Rules, 1960 (Rules 13, 21A, 27). Always consult state CEO and ECI official notifications for state-specific schedules.</p>
@@ -242,7 +242,7 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 44px;font
 <li data-h="दस्तावेज़ और संख्या माँगें, राय नहीं। प्रश्न छोटा और स्पष्ट रखें।">Ask for documents and numbers, not opinions. Keep it short and specific.</li>
 <li data-h="व्यक्तिगत डेटा जैसी कुछ जानकारी छूट के तहत रोकी जा सकती है। आप अपील कर सकते हैं।">Some information may be refused under the Act's exemptions, such as personal data. You can appeal.</li></ul></div>
 <div class="card lim"><h3 data-h="याचिकाएँ और शिकायतें">Petitions and complaints</h3><ul>
-<li data-h="निर्वाचक रजिस्ट्रीकरण अधिकारी, डीएम या मुख्य निर्वाचन अधिकारी को लिखें। पावती और तारीख सुरक्षित रखें।">Write to the Electoral Registration Officer, District Magistrate or Chief Electoral Officer. Keep a dated copy and proof of delivery.</li>
+<li data-h="निर्वाचक रजिस्ट्रीकरण अधिकारी, ज़िला निर्वाचन अधिकारी (आम तौर पर कलेक्टर) या मुख्य निर्वाचन अधिकारी को लिखें। पावती और तारीख सुरक्षित रखें।">Write to the Electoral Registration Officer, District Election Officer (usually the Collector) or Chief Electoral Officer. Keep a dated copy and proof of delivery.</li>
 <li data-h="केंद्रीय सरकारी निकायों के खिलाफ सामान्य शिकायतें CPGRAMS (pgportal.gov.in) पर दर्ज की जा सकती हैं।">General grievances against central government bodies can be filed on CPGRAMS (pgportal.gov.in).</li>
 <li data-h="आप अपने सांसद या विधायक को भी याचिका दे सकते हैं, और अनुच्छेद 32 व 226 के तहत अदालत का रुख कर सकते हैं।">You can also petition your MP or MLA, and approach the courts under Articles 32 and 226.</li></ul></div>
 </div>
@@ -364,7 +364,7 @@ var VC=[
   "<b>Not found?</b> Don't panic. If you are an unregistered or first-time voter, apply using Form 6 (see below). " +
   "If you were an existing voter missing during revision or an ongoing SIR, do not file a duplicate Form 6; " +
   "check your state's claims-and-objections schedule and follow the SIR Action Centre below.",
-  "<b>नहीं मिला?</b> घबराएँ नहीं। यदि आप अप्रकाशित या नए मतदाता हैं, तो फ़ॉर्म 6 से आवेदन करें (नीचे देखें)। " +
+  "<b>नहीं मिला?</b> घबराएँ नहीं। यदि आप अपंजीकृत या पहली बार के मतदाता हैं, तो फ़ॉर्म 6 से आवेदन करें (नीचे देखें)। " +
   "यदि आप पहले से पंजीकृत मतदाता थे और पुनरीक्षण या SIR में नाम नहीं दिख रहा, तो दोहरा फ़ॉर्म 6 न भरें; " +
   "अपने राज्य की दावे-आपत्ति समय-सारणी देखें और नीचे दिए गए SIR एक्शन सेंटर का पालन करें।"
 ]
@@ -463,13 +463,13 @@ var SIR_SCENARIOS = [
       "पहचान और आयु प्रमाण (आधार कार्ड, पुराना वोटर आईडी, पैन कार्ड, ड्राइविंग लाइसेंस, पासपोर्ट)।",
       "प्राप्त हुए नोटिस की मूल प्रति।"
     ],
-    esc_en: "If receipt is refused or arbitrary action is taken, submit a written representation to the District Magistrate (District Election Officer) and escalate to the State Chief Electoral Officer (CEO).",
-    esc_hi: "यदि पावती देने से मना किया जाए या मनमानी कार्रवाई हो, तो ज़िला मजिस्ट्रेट (DEO) को लिखित शिकायत दें और राज्य मुख्य निर्वाचन अधिकारी (CEO) को सूचित करें।"
+    esc_en: "If receipt is refused or arbitrary action is taken, submit a written representation to the District Election Officer (usually the Collector) and escalate to the State Chief Electoral Officer (CEO).",
+    esc_hi: "यदि पावती देने से मना किया जाए या मनमानी कार्रवाई हो, तो ज़िला निर्वाचन अधिकारी (आम तौर पर कलेक्टर) को लिखित शिकायत दें और राज्य मुख्य निर्वाचन अधिकारी (CEO) को सूचित करें।"
   },
   {
     id: "missing",
     en_title: "2. Unenrolled or first-time voter missing from roll",
-    hi_title: "2. अप्रकाशित या नया मतदाता (पहली बार)",
+    hi_title: "2. अपंजीकृत या पहली बार का मतदाता",
     dest_en: "Official Destination: Form 6 on ECI Voter Portal",
     dest_hi: "आधिकारिक गंतव्य: चुनाव आयोग पोर्टल — फ़ॉर्म 6 (नया पंजीकरण)",
     url: "https://voters.eci.gov.in/",
@@ -533,8 +533,8 @@ var SIR_SCENARIOS = [
       "वर्तमान निवास प्रमाण और पहचान प्रमाण।",
       "ERO/DEO के नाम औपचारिक दावा या अभ्यावेदन पत्र।"
     ],
-    esc_en: "Pre-publication decisions under Rules 20/21/21A are appealable under Rule 23 to the Appellate Officer. Post-publication orders under Section 22/23 are appealable to the District Magistrate under Rule 27 / Section 24. For arbitrary mass disenfranchisement, a writ petition lies under Article 226 in the High Court.",
-    esc_hi: "नियम 20/21/21A के तहत अंतिम प्रकाशन पूर्व के निर्णयों के विरुद्ध नियम 23 के तहत अपीलीय अधिकारी को अपील होती है। अंतिम प्रकाशन बाद धारा 22/23 के निर्णयों के विरुद्ध नियम 27 व धारा 24 के तहत ज़िला मजिस्ट्रेट को अपील होती है। मनमाने सामूहिक विलोपन पर उच्च न्यायालय में अनुच्छेद 226 याचिका दायर की जा सकती है।"
+    esc_en: "Pre-publication decisions under Rules 20/21/21A are appealable under Rule 23 to the Appellate Officer. Post-publication orders under Section 22/23 can be appealed to the District Election Officer (usually the Collector) under Section 24(a), with procedure and time limits in Rule 27. For arbitrary mass disenfranchisement, a writ petition lies under Article 226 in the High Court.",
+    esc_hi: "नियम 20/21/21A के तहत अंतिम प्रकाशन पूर्व के निर्णयों के विरुद्ध नियम 23 के तहत अपीलीय अधिकारी को अपील होती है। अंतिम प्रकाशन बाद धारा 22/23 के निर्णयों के विरुद्ध धारा 24(क) के तहत ज़िला निर्वाचन अधिकारी (आम तौर पर कलेक्टर) को अपील होती है; प्रक्रिया और समय सीमा नियम 27 में है। मनमाने सामूहिक विलोपन पर उच्च न्यायालय में अनुच्छेद 226 याचिका दायर की जा सकती है।"
   },
   {
     id: "hearing",
@@ -545,14 +545,14 @@ var SIR_SCENARIOS = [
     url: "https://voters.eci.gov.in/",
     steps_en: [
       "Check summons details: Verify exact date, time, venue, room number, and presiding officer.",
-      "Prepare duplicate dossiers: Make two complete self-attested photocopies of all requested proofs alongside originals.",
+      "Prepare copies: Make two complete self-attested photocopies of all requested proofs and bring the originals.",
       "Attend in person: Be present punctually. You may be accompanied by a family member or legal aid volunteer.",
       "Submit written deposition: State clearly in writing that you are an ordinary resident and entitled to vote.",
       "Demand attendance endorsement: Insist that the officer sign, stamp, and record the date on your duplicate copy."
     ],
     steps_hi: [
       "समन विवरण जाँचें: सुनवाई की तारीख, समय, स्थान, कक्ष संख्या और पीठासीन अधिकारी की पुष्टि करें।",
-      "दोहरी फाइल तैयार करें: मूल दस्तावेज़ों के साथ सभी प्रतियों के दो स्व-हस्ताक्षरित सेट बनाएँ।",
+      "प्रतियाँ तैयार करें: सभी माँगे गए प्रमाणों की दो पूरी स्व-हस्ताक्षरित प्रतियाँ बनाएँ और मूल दस्तावेज़ साथ ले जाएँ।",
       "व्यक्तिगत रूप से उपस्थित हों: समय पर पहुँचें। परिजन या विधिक सहायता कार्यकर्ता को साथ ले जा सकते हैं।",
       "लिखित बयान दें: स्पष्ट लिखित बयान दें कि आप क्षेत्र के सामान्य निवासी और मताधिकार के पात्र हैं।",
       "उपस्थिति प्रमाण लें: अधिकारी से अपनी दूसरी प्रति पर उपस्थिति की मुहर, हस्ताक्षर और तारीख अवश्य दर्ज कराएँ।"
@@ -569,29 +569,29 @@ var SIR_SCENARIOS = [
       "मूल निवास प्रमाण (मकान रजिस्ट्री, रजिस्टर्ड किरायानामा, बिल, पासबुक)।",
       "उसी पते पर रहने वाले परिवार के अन्य सदस्यों के मतदाता विवरण।"
     ],
-    esc_en: "Request written decision: If an adverse decision is indicated, request a certified copy of the written speaking order stating reasons. Determine whether your appeal lies under Rule 23 (pre-publication revision) or Rule 27 (post-publication order) and confirm the applicable limitation period.",
-    esc_hi: "लिखित निर्णय माँगें: यदि प्रतिकूल निर्णय हो, तो कारणों सहित सकारण लिखित आदेश (speaking order) की प्रमाणित प्रति प्राप्त करें। जाँचें कि आपकी अपील नियम 23 (प्रकाशन पूर्व पुनरीक्षण) या नियम 27 (प्रकाशन बाद आदेश) के अधीन है और निर्धारित समय सीमा की पुष्टि करें।"
+    esc_en: "Request written decision: If an adverse decision is indicated, request a certified copy of the written order giving reasons. Determine whether your appeal lies under Rule 23 (pre-publication revision) or Rule 27 (post-publication order) and confirm the applicable limitation period.",
+    esc_hi: "लिखित निर्णय माँगें: यदि प्रतिकूल निर्णय हो, तो कारणों सहित लिखित आदेश की प्रमाणित प्रति प्राप्त करें। जाँचें कि आपकी अपील नियम 23 (प्रकाशन पूर्व पुनरीक्षण) या नियम 27 (प्रकाशन बाद आदेश) के अधीन है और निर्धारित समय सीमा की पुष्टि करें।"
   },
   {
     id: "rejected",
     en_title: "5. Application or claim was rejected",
     hi_title: "5. आवेदन या दावा अस्वीकार किया गया",
-    dest_en: "Official Destination: Designated Appellate Authority (DM / CEO)",
-    dest_hi: "आधिकारिक गंतव्य: निर्धारित अपीलीय प्राधिकारी (DM / CEO)",
+    dest_en: "Official Destination: Designated Appellate Authority (District Election Officer / CEO)",
+    dest_hi: "आधिकारिक गंतव्य: निर्धारित अपीलीय प्राधिकारी (ज़िला निर्वाचन अधिकारी / CEO)",
     url: "https://voters.eci.gov.in/",
     steps_en: [
       "Request formal written order: Request the formal written decision containing reasons from the ERO, as appeal procedures require the specific order being challenged.",
-      "Identify applicable appeal route: For orders under Section 22 or 23, file a First Appeal to the District Magistrate / DEO within 15 days under Rule 27 of Registration of Electors Rules, 1960. Decisions under Rule 20/21/21A before final publication follow Rule 23.",
+      "Identify applicable appeal route: For orders under Section 22 or 23, file a first appeal under Section 24(a) to the District Election Officer (usually the Collector). Rule 27 of the Registration of Electors Rules, 1960 sets the procedure and time limits, commonly stated as 15 days, so confirm the deadline on your order or notice. Decisions under Rule 20/21/21A before final publication follow Rule 23.",
       "Draft Grounds of Appeal: Detail why the rejection was erroneous, referencing submitted residence/identity proofs and relevant statutory rules.",
       "Check prescribed fees: Check state election rules for any nominal court fee stamp requirement.",
-      "Second Appeal route: If the District Magistrate rejects a Section 24 appeal, a Second Appeal lies before the State Chief Electoral Officer (CEO) within 30 days."
+      "Second appeal route: If the first appeal is rejected, a second appeal under Section 24(b) lies before the State Chief Electoral Officer (CEO), commonly stated as within 30 days. Confirm the deadline on the order."
     ],
     steps_hi: [
       "औपचारिक लिखित आदेश प्राप्त करें: ERO से कारणों सहित औपचारिक लिखित आदेश की प्रति प्राप्त करें, क्योंकि अपील के लिए विवादित आदेश का होना आवश्यक है।",
-      "लागू अपील मार्ग पहचानें: धारा 22 या 23 के तहत आदेशों के लिए, निर्वाचक रजिस्ट्रीकरण नियम 1960 के नियम 27 के तहत 15 दिनों में ज़िला मजिस्ट्रेट (DEO) को प्रथम अपील दाखिल करें। अंतिम प्रकाशन पूर्व नियम 20/21/21A के निर्णयों में नियम 23 लागू होता है।",
+      "लागू अपील मार्ग पहचानें: धारा 22 या 23 के तहत आदेशों के लिए, धारा 24(क) के तहत ज़िला निर्वाचन अधिकारी (आम तौर पर कलेक्टर) को प्रथम अपील दाखिल करें। समय सीमा और प्रक्रिया निर्वाचक रजिस्ट्रीकरण नियम 1960 के नियम 27 में है (आम तौर पर 15 दिन बताई जाती है); अपने आदेश या नोटिस पर तारीख की पुष्टि करें। अंतिम प्रकाशन पूर्व नियम 20/21/21A के निर्णयों में नियम 23 लागू होता है।",
       "अपील के आधार तैयार करें: प्रस्तुत दस्तावेज़ों और संबंधित वैधानिक नियमों का हवाला देते हुए विस्तार से बताएं कि अस्वीकृति क्यों त्रुटिपूर्ण थी।",
       "निर्धारित शुल्क: यदि राज्य के नियमों में आवश्यक हो तो कोर्ट फ़ीस स्टाम्प की जाँच करें।",
-      "द्वितीय अपील मार्ग: यदि डीएम धारा 24 की अपील खारिज करते हैं, तो 30 दिनों में राज्य मुख्य निर्वाचन अधिकारी (CEO) के समक्ष द्वितीय अपील का अधिकार है।"
+      "द्वितीय अपील मार्ग: यदि प्रथम अपील खारिज हो जाए, तो धारा 24(ख) के तहत राज्य मुख्य निर्वाचन अधिकारी (CEO) के समक्ष द्वितीय अपील की जा सकती है, आम तौर पर 30 दिनों में। आदेश पर तारीख की पुष्टि करें।"
     ],
     docs_en: [
       "Certified copy of the ERO's rejection order.",
@@ -605,8 +605,8 @@ var SIR_SCENARIOS = [
       "समर्थक पहचान और निवास प्रमाण पत्र।",
       "अपील के आधारों का ज्ञापन।"
     ],
-    esc_en: "First Appeal under Rule 27 (15 days to DM) → Second Appeal under Section 24 (30 days to State CEO). Pre-publication revision appeals follow Rule 23. Extraordinary legal remedy: Writ petition under Article 226 in the High Court.",
-    esc_hi: "नियम 27 के तहत प्रथम अपील (15 दिन, डीएम) → धारा 24 के तहत द्वितीय अपील (30 दिन, राज्य CEO)। प्रकाशन पूर्व पुनरीक्षण में नियम 23 लागू। असाधारण उपाय: उच्च न्यायालय में अनुच्छेद 226 रिट याचिका।"
+    esc_en: "First appeal under Section 24(a) to the District Election Officer (usually the Collector) → second appeal under Section 24(b) to the State CEO. Rule 27 sets procedure and time limits (commonly stated as 15 and 30 days; confirm on your order). Pre-publication revision appeals follow Rule 23. Extraordinary legal remedy: Writ petition under Article 226 in the High Court.",
+    esc_hi: "धारा 24(क) के तहत ज़िला निर्वाचन अधिकारी (आम तौर पर कलेक्टर) को प्रथम अपील → धारा 24(ख) के तहत राज्य CEO को द्वितीय अपील। समय सीमा और प्रक्रिया नियम 27 में है (आम तौर पर 15 और 30 दिन; आदेश पर पुष्टि करें)। प्रकाशन पूर्व पुनरीक्षण में नियम 23 लागू। असाधारण उपाय: उच्च न्यायालय में अनुच्छेद 226 रिट याचिका।"
   },
   {
     id: "correction",
