@@ -1,7 +1,7 @@
 # Inquilab: Legal Review Checklist & Specialist Verification Package
 
 > **Review Branch**: `chore/pre-legal-review`<br>
-> **Base Commit**: `54cb1a541e6029dde6dea6894d53f2e3faebefac`<br>
+> **Base Commit**: `8c17da58b23430118b7dfff1f1be5fb92e3f8675`<br>
 > **Source Repository**: [Ravindra2377/Inquilab](https://github.com/Ravindra2377/Inquilab)<br>
 > **Target Page**: `index.html` (Static bilingual civic guide)<br>
 > **Companion Document**: [LEGAL_SOURCE_REGISTER.csv](LEGAL_SOURCE_REGISTER.csv) (Traceable inventory of 53 claims)<br>
