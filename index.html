@@ -25,7 +25,18 @@ a{color:var(--link)}
 :focus-visible{outline:3px solid var(--saf);outline-offset:2px}
 .wrap{max-width:900px;margin:0 auto;padding:0 20px}
 .top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid var(--line)}
-.top nav a{margin-right:16px;text-decoration:none;font-weight:600;color:var(--ink)}
+.nav-menu{position:relative}
+.menu-toggle{display:inline-flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);color:var(--ink);padding:6px 14px;border-radius:6px;cursor:pointer;font:600 .95rem system-ui,"Noto Sans Devanagari","Nirmala UI",sans-serif;list-style:none;user-select:none;transition:border-color .15s,background .15s}
+.menu-toggle::-webkit-details-marker{display:none}
+.menu-toggle:hover{background:var(--bg);border-color:var(--chakra)}
+.hamburger{display:inline-flex;flex-direction:column;justify-content:space-between;width:18px;height:13px}
+.hamburger span{display:block;height:2px;width:100%;background-color:var(--ink);border-radius:1px;transition:transform .2s ease,opacity .2s ease}
+details[open] .hamburger span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
+details[open] .hamburger span:nth-child(2){opacity:0}
+details[open] .hamburger span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+.nav-drawer{position:absolute;top:calc(100% + 8px);left:0;z-index:1000;min-width:220px;background:var(--card);border:1px solid var(--line);border-radius:8px;box-shadow:0 10px 28px rgba(0,0,0,.15);padding:6px 0;display:flex;flex-direction:column}
+.nav-drawer a{display:block;padding:9px 18px;text-decoration:none;font-weight:600;font-size:.95rem;color:var(--ink);margin:0;transition:background .15s,color .15s}
+.nav-drawer a:hover,.nav-drawer a:focus{background:var(--bg);color:var(--chakra)}
 .lang button{font:inherit;font-weight:600;background:none;border:1px solid var(--line);color:var(--ink);padding:3px 12px;cursor:pointer}
 .lang button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
 .hero{padding:52px 0 34px;border-left:10px solid var(--saf);padding-left:22px;margin-top:28px}
@@ -149,7 +160,22 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px 0 44px;font
 </noscript>
 <div class="wrap">
 <div class="top">
-  <nav><a href="#rights" data-h="अधिकार">Rights</a><a href="#protest" data-h="विरोध">Protest</a><a href="#detain" data-h="हिरासत">If detained</a><a href="#cases" data-h="फ़ैसले">Cases</a><a href="#voter" data-h="मतदाता">Voter roll</a><a href="#notice" data-h="SIR एक्शन">SIR Action</a><a href="#rti" data-h="RTI">RTI</a><a href="#about" data-h="हमारे बारे में">About</a></nav>
+  <details class="nav-menu" id="nav-menu">
+    <summary class="menu-toggle" aria-label="Navigation Menu">
+      <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="menu-text" data-h="मेन्यू">Menu</span>
+    </summary>
+    <nav class="nav-drawer" aria-label="Main Navigation">
+      <a href="#rights" data-h="अधिकार">Rights</a>
+      <a href="#protest" data-h="विरोध">Protest</a>
+      <a href="#detain" data-h="हिरासत">If detained</a>
+      <a href="#cases" data-h="फ़ैसले">Cases</a>
+      <a href="#voter" data-h="मतदाता">Voter roll</a>
+      <a href="#notice" data-h="SIR एक्शन">SIR Action</a>
+      <a href="#rti" data-h="RTI">RTI</a>
+      <a href="#about" data-h="हमारे बारे में">About</a>
+    </nav>
+  </details>
   <div class="lang" role="group" aria-label="Language"><button id="en" aria-pressed="true">English</button><button id="hi" aria-pressed="false">हिन्दी</button></div>
 </div>
 
@@ -747,6 +773,26 @@ function setLang(l){
 document.getElementById("en").onclick=function(){setLang("en")};
 document.getElementById("hi").onclick=function(){setLang("hi")};
 render();
+
+/* ── Hamburger Menu Interactions ── */
+var navMenu=document.getElementById("nav-menu");
+if(navMenu){
+  navMenu.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click",function(){navMenu.removeAttribute("open")});
+  });
+  document.addEventListener("click",function(ev){
+    if(navMenu.hasAttribute("open") && !navMenu.contains(ev.target)){
+      navMenu.removeAttribute("open");
+    }
+  });
+  document.addEventListener("keydown",function(ev){
+    if(ev.key==="Escape" && navMenu.hasAttribute("open")){
+      navMenu.removeAttribute("open");
+      var summary=navMenu.querySelector("summary");
+      if(summary) summary.focus();
+    }
+  });
+}
 </script>
 </body>
 </html>
